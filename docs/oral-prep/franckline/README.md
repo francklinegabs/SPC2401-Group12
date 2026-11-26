@@ -22,3 +22,4 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 
 11. [What are our three notification event types?](11-what-are-our-three-notification-event-types.md)
 12. [Why push the event but pull the mark?](12-why-push-the-event-but-pull-the-mark.md)
+13. [What lease did we choose and how is it renewed?](13-what-lease-did-we-choose-and-how-is-it-renewed.md)
