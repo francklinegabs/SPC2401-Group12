@@ -22,3 +22,4 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 ## RetryingCaller – timeout, retry, back-off
 
 9. [What does RetryingCaller.call do, in one sentence?](09-what-does-retryingcaller-call-do-in-one-sentence.md)
+10. [How is the per-attempt timeout implemented?](10-how-is-the-per-attempt-timeout-implemented.md)
