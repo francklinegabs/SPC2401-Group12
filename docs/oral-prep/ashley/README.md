@@ -39,3 +39,4 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 
 19. [What is the journal's format?](19-what-is-the-journal-s-format.md)
 20. [What does write-ahead mean here?](20-what-does-write-ahead-mean-here.md)
+21. [Does flush() survive every kind of crash?](21-does-flush-survive-every-kind-of-crash.md)
