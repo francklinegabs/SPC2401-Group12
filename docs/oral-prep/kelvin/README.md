@@ -12,3 +12,7 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 6. [How are expired leases cleaned up?](06-how-are-expired-leases-cleaned-up.md)
 7. [Why is the map a ConcurrentHashMap?](07-why-is-the-map-a-concurrenthashmap.md)
 8. [Why only notify 'active' subscriptions?](08-why-only-notify-active-subscriptions.md)
+
+## Notifier – the callback pool
+
+9. [How many notifier threads are there and why?](09-how-many-notifier-threads-are-there-and-why.md)
