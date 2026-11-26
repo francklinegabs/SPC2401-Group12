@@ -12,3 +12,4 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 ## Section 1 – Remote invocation
 
 5. [Step 1 of the trace: what does the lecturer's code do?](05-step-1-of-the-trace-what-does-the-lecturer-s-code.md)
+6. [Step 2: what does the client stub do?](06-step-2-what-does-the-client-stub-do.md)
