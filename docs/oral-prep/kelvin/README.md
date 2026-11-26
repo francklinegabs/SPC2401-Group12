@@ -17,3 +17,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 
 9. [How many notifier threads are there and why?](09-how-many-notifier-threads-are-there-and-why.md)
 10. [What did we measure for 2,000 slow callbacks?](10-what-did-we-measure-for-2-000-slow-callbacks.md)
+11. [What does the notifier do when a callback throws?](11-what-does-the-notifier-do-when-a-callback-throws.md)
