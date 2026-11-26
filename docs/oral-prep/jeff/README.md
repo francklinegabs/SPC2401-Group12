@@ -15,3 +15,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 ## Integration tests
 
 8. [What does the four-process integration test do?](08-what-does-the-four-process-integration-test-do.md)
+9. [How do the tests start other JVMs?](09-how-do-the-tests-start-other-jvms.md)
