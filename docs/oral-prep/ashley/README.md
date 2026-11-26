@@ -16,3 +16,4 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 ## KyuClientSocketFactory – timeouts and simulated delay
 
 6. [What does KyuClientSocketFactory do on every new socket?](06-what-does-kyuclientsocketfactory-do-on-every-new-s.md)
+7. [In which JVM does the socket factory run?](07-in-which-jvm-does-the-socket-factory-run.md)
