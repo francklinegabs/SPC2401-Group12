@@ -20,3 +20,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 11. [What does the notifier do when a callback throws?](11-what-does-the-notifier-do-when-a-callback-throws.md)
 12. [Why are the callbacks CompletableFutures?](12-why-are-the-callbacks-completablefutures.md)
 13. [What is in a PublishReport?](13-what-is-in-a-publishreport.md)
+14. [Why does the notifier never hold a lock while calling back?](14-why-does-the-notifier-never-hold-a-lock-while-call.md)
