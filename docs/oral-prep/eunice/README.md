@@ -15,3 +15,4 @@ One question per card, answered from my own package (WP3) and report Sections 3 
 
 7. [Why did I choose a worker pool over thread-per-request?](07-why-did-i-choose-a-worker-pool-over-thread-per-req.md)
 8. [Why not thread-per-object?](08-why-not-thread-per-object.md)
+9. [How does the RMI thread hand work to my pool?](09-how-does-the-rmi-thread-hand-work-to-my-pool.md)
