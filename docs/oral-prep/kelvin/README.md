@@ -40,3 +40,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 25. [Why push the event but pull the mark?](25-why-push-the-event-but-pull-the-mark.md)
 26. [What happens when a laptop sleeps for 2 days?](26-what-happens-when-a-laptop-sleeps-for-2-days.md)
 27. [Which layer turns a mark into bytes, and which finds GradeService by name?](27-which-layer-turns-a-mark-into-bytes-and-which-find.md)
+28. [Which layer schedules threads and sends TCP packets?](28-which-layer-schedules-threads-and-sends-tcp-packet.md)
