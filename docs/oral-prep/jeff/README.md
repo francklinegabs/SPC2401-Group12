@@ -16,3 +16,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 
 8. [What does the four-process integration test do?](08-what-does-the-four-process-integration-test-do.md)
 9. [How do the tests start other JVMs?](09-how-do-the-tests-start-other-jvms.md)
+10. [Why was that class-path trick needed?](10-why-was-that-class-path-trick-needed.md)
