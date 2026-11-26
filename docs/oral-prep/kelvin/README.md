@@ -37,3 +37,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 ## Section 2 – notification, middleware and the OS
 
 24. [Name our three event types and how each is delivered.](24-name-our-three-event-types-and-how-each-is-deliver.md)
+25. [Why push the event but pull the mark?](25-why-push-the-event-but-pull-the-mark.md)
