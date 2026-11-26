@@ -10,3 +10,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 4. [What does renew() do when the lease has already run out?](04-what-does-renew-do-when-the-lease-has-already-run.md)
 5. [Why does remove() take the Subscription object, not just the ID?](05-why-does-remove-take-the-subscription-object-not-j.md)
 6. [How are expired leases cleaned up?](06-how-are-expired-leases-cleaned-up.md)
+7. [Why is the map a ConcurrentHashMap?](07-why-is-the-map-a-concurrenthashmap.md)
