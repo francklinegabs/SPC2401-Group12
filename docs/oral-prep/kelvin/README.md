@@ -5,3 +5,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 ## SubscriptionManager – leases
 
 1. [What does a subscription hold?](01-what-does-a-subscription-hold.md)
+2. [How is the lease length decided?](02-how-is-the-lease-length-decided.md)
