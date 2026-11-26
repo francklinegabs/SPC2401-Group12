@@ -27,3 +27,7 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 12. [Which errors are never retried, and why?](12-which-errors-are-never-retried-and-why.md)
 13. [Why drop the cached stub after a failure?](13-why-drop-the-cached-stub-after-a-failure.md)
 14. [What back-off do we use?](14-what-back-off-do-we-use.md)
+
+## RequestDeduplicator – at-most-once
+
+15. [What problem does RequestDeduplicator solve?](15-what-problem-does-requestdeduplicator-solve.md)
