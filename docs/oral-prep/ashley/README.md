@@ -57,3 +57,4 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 
 28. [What kind of system is Amoeba?](28-what-kind-of-system-is-amoeba.md)
 29. [What are Amoeba's main kinds of machine?](29-what-are-amoeba-s-main-kinds-of-machine.md)
+30. [What is the processor pool and how would KYU use it?](30-what-is-the-processor-pool-and-how-would-kyu-use-i.md)
