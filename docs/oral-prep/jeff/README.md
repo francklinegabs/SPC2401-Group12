@@ -39,3 +39,7 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 24. [What did 4 real cores reach with 16 workers?](24-what-did-4-real-cores-reach-with-16-workers.md)
 25. [How does latency check against Little's law?](25-how-does-latency-check-against-little-s-law.md)
 26. [What did the dashboard measurement show for 4.4?](26-what-did-the-dashboard-measurement-show-for-4-4.md)
+
+## Defects and limits (7.5)
+
+27. [Name a real defect we found and fixed while testing.](27-name-a-real-defect-we-found-and-fixed-while-testin.md)
