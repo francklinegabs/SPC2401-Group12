@@ -41,3 +41,7 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 20. [What does write-ahead mean here?](20-what-does-write-ahead-mean-here.md)
 21. [Does flush() survive every kind of crash?](21-does-flush-survive-every-kind-of-crash.md)
 22. [How does replay handle a half-written last line?](22-how-does-replay-handle-a-half-written-last-line.md)
+
+## LecturerClient
+
+23. [What commands does the lecturer client accept?](23-what-commands-does-the-lecturer-client-accept.md)
