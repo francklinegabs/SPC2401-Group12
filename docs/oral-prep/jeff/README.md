@@ -10,3 +10,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 4. [How is 'retry applied once' tested?](04-how-is-retry-applied-once-tested.md)
 5. [How is a lease expiry tested without waiting 2 days?](05-how-is-a-lease-expiry-tested-without-waiting-2-day.md)
 6. [How is recovery after a crash tested?](06-how-is-recovery-after-a-crash-tested.md)
+7. [How do you run the tests?](07-how-do-you-run-the-tests.md)
