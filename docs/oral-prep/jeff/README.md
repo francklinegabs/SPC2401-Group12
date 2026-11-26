@@ -28,3 +28,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 16. [What did killing the server after storing show (A2)?](16-what-did-killing-the-server-after-storing-show-a2.md)
 17. [What did taking a student offline show (B)?](17-what-did-taking-a-student-offline-show-b.md)
 18. [What did 1,500 ms network delay show (C)?](18-what-did-1-500-ms-network-delay-show-c.md)
+19. [How does experiment C compare with 1.2?](19-how-does-experiment-c-compare-with-1-2.md)
