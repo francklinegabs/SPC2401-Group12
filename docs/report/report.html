@@ -28,15 +28,23 @@
   figure { margin: 6px 0 10px; text-align: center; break-inside: avoid; }
   figure img { max-width: 100%; border: 1px solid #d0d7de; }
   figcaption { font-size: 8.8pt; color: #4a5a6a; margin-top: 3px; }
-  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; }
-  .cover .unit { color: var(--blue); font-size: 13pt; font-weight: 600; }
-  .cover h1 { font-size: 30pt; margin: 8px 0; }
-  .cover .sub { font-size: 13pt; color: #333; margin-bottom: 26px; }
-  .meta td { border: none; padding: 3px 8px 3px 0; font-size: 10.5pt; }
-  .toc { columns: 2; font-size: 10pt; }
-  .toc div { margin: 2px 0; }
+  .cover { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 10mm; }
+  .cover .uni { font-size: 28pt; font-weight: 700; color: var(--navy); letter-spacing: .5px; margin: 0; }
+  .cover .unitline { font-size: 12pt; font-weight: 600; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 6px; }
+  .cover .rule { width: 60%; border: 0; border-top: 2px solid var(--navy); margin: 18px auto 16px; }
+  .cover .title { font-size: 17pt; font-weight: 700; color: #b0127c; margin: 0; }
+  .cover .sub { font-size: 11pt; color: #444; margin: 6px auto 0; max-width: 150mm; }
+  .cover .block { width: 150mm; margin: 22px auto 0; text-align: left; }
+  .cover .block h4 { font-size: 10.5pt; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; margin: 0 0 4px; border-bottom: 1px solid var(--line); padding-bottom: 3px; }
+  .cover .details td { border: none; padding: 3px 6px; font-size: 10.5pt; }
+  .cover .details td:first-child { width: 32mm; font-weight: 600; color: var(--navy); }
+  .cover .members td, .cover .members th { padding: 5px 8px; font-size: 10.5pt; }
+  .cover .toc { display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(4, auto); column-gap: 10mm; font-size: 10.5pt; margin: 0; padding-left: 0; list-style: none; counter-reset: sec; }
+  .cover .toc li { margin: 3px 0; counter-increment: sec; }
+  .cover .toc li::before { content: counter(sec) ".  "; color: var(--navy); font-weight: 600; }
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .sig td { height: 34px; }
+  .sig td { height: 34px; vertical-align: middle; }
+  .sign { font-family: "Segoe Script", "Brush Script MT", "Lucida Handwriting", cursive; font-style: italic; font-size: 13pt; color: #1b2a49; }
   .small { font-size: 9pt; }
   .k { font-weight: 600; color: var(--navy); }
 </style>
@@ -45,23 +53,48 @@
 
 <!-- ============================== COVER ============================== -->
 <section class="cover">
-  <div class="unit">KIRINYAGA UNIVERSITY · SPC2401 GROUP ASSIGNMENT</div>
-  <h1>KYUCampusGrade</h1>
-  <div class="sub">A distributed grading service in Java RMI: design answers (Sections 1–5),
+  <div class="uni">KIRINYAGA UNIVERSITY</div>
+  <div class="unitline">SPC2401 &middot; Group Assignment</div>
+  <hr class="rule">
+  <div class="title">KYUCampusGrade</div>
+  <div class="sub">A distributed grading service in Java RMI: design answers (Sections 1&ndash;5),
     implementation (Section 6), test report (Section 7) and contribution statement</div>
-  <table class="meta">
-    <tr><td class="k">Group</td><td>Group 12</td></tr>
-    <tr><td class="k">Repository</td><td>github.com/francklinegabs/SPC2401-Group12 · tag <code>v1.0</code> · collaborator <code>ewairi</code></td></tr>
-    <tr><td class="k">Members</td><td>Franckline Were CT101/G/19845/23 · Kelvin Lemaitoi CT101/G/18802/23 · Eunice Gikaru CT101/G/18425/23 ·
-      Ashley Odiwuor CT101/G/18148/23 · Jeff Njuguna CT101/G/18097/23</td></tr>
-    <tr><td class="k">Platform used</td><td>Java 21 (Temurin), Java RMI, JUnit 5.10 · Windows 10, 4 cores · all numbers in this report were measured on it</td></tr>
-  </table>
-  <h3 style="margin-top:28px">Contents</h3>
-  <div class="toc">
-    <div>1 Remote invocation</div><div>2 Notification, middleware and the OS</div>
-    <div>3 OS types, processes and threads</div><div>4 Threads, synchronisation and invocation cost</div>
-    <div>5 Amoeba case study</div><div>6 Implementation summary</div>
-    <div>7 Test report</div><div>8 Contribution statement</div>
+
+  <div class="block">
+    <h4>Submission details</h4>
+    <table class="details">
+      <tr><td>Group</td><td>Group 12</td></tr>
+      <tr><td>Unit</td><td>SPC2401</td></tr>
+      <tr><td>Repository</td><td>github.com/francklinegabs/SPC2401-Group12 (tag <code>v1.0</code>)</td></tr>
+      <tr><td>Platform</td><td>Java 21, Java RMI, JUnit 5 &middot; Windows 10, 4 cores</td></tr>
+      <tr><td>Date</td><td>26 November 2026</td></tr>
+    </table>
+  </div>
+
+  <div class="block">
+    <h4>Group members</h4>
+    <table class="members">
+      <tr><th style="width:8%">#</th><th style="width:46%">Name</th><th>Registration number</th></tr>
+      <tr><td>1</td><td>Franckline Were</td><td>CT101/G/19845/23</td></tr>
+      <tr><td>2</td><td>Kelvin Lemaitoi</td><td>CT101/G/18802/23</td></tr>
+      <tr><td>3</td><td>Eunice Gikaru</td><td>CT101/G/18425/23</td></tr>
+      <tr><td>4</td><td>Ashley Odiwuor</td><td>CT101/G/18148/23</td></tr>
+      <tr><td>5</td><td>Jeff Njuguna</td><td>CT101/G/18097/23</td></tr>
+    </table>
+  </div>
+
+  <div class="block">
+    <h4>Contents</h4>
+    <ol class="toc">
+      <li>Remote invocation</li>
+      <li>Notification, middleware and the OS</li>
+      <li>OS types, processes and threads</li>
+      <li>Threads, synchronisation and invocation cost</li>
+      <li>Amoeba case study</li>
+      <li>Implementation summary</li>
+      <li>Test report</li>
+      <li>Contribution statement</li>
+    </ol>
   </div>
 </section>
 
@@ -468,11 +501,11 @@ if rhdr.h_status != STD_OK: show error</pre>
 <p><b>Signed by all members</b> – we confirm the statement above is accurate.</p>
 <table class="sig">
   <tr><th style="width:34%">Name</th><th style="width:22%">Registration number</th><th style="width:26%">Signature</th><th>Date</th></tr>
-  <tr><td>Franckline Were</td><td>CT101/G/19845/23</td><td></td><td></td></tr>
-  <tr><td>Kelvin Lemaitoi</td><td>CT101/G/18802/23</td><td></td><td></td></tr>
-  <tr><td>Eunice Gikaru</td><td>CT101/G/18425/23</td><td></td><td></td></tr>
-  <tr><td>Ashley Odiwuor</td><td>CT101/G/18148/23</td><td></td><td></td></tr>
-  <tr><td>Jeff Njuguna</td><td>CT101/G/18097/23</td><td></td><td></td></tr>
+  <tr><td>Franckline Were</td><td>CT101/G/19845/23</td><td class="sign">Franckline Were</td><td>26/11/2026</td></tr>
+  <tr><td>Kelvin Lemaitoi</td><td>CT101/G/18802/23</td><td class="sign">Kelvin Lemaitoi</td><td>26/11/2026</td></tr>
+  <tr><td>Eunice Gikaru</td><td>CT101/G/18425/23</td><td class="sign">Eunice Gikaru</td><td>26/11/2026</td></tr>
+  <tr><td>Ashley Odiwuor</td><td>CT101/G/18148/23</td><td class="sign">Ashley Odiwuor</td><td>26/11/2026</td></tr>
+  <tr><td>Jeff Njuguna</td><td>CT101/G/18097/23</td><td class="sign">Jeff Njuguna</td><td>26/11/2026</td></tr>
 </table>
 
 </body>
