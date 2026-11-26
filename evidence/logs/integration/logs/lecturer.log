@@ -1,0 +1,7 @@
+2026-11-26T09:23:54.071-05:00 [INFO] [lecturer] [main] OK stored KYU001 SPC2401 = 78 (req a9033747-a48a-41bf-bb27-660396ef0328)
+2026-11-26T09:23:54.091-05:00 [INFO] [lecturer] [main] OK stored KYU002 SPC2401 = 64 (req 350442f8-c1b0-48c8-ba16-0b1b99ed479c)
+2026-11-26T09:23:54.156-05:00 [WARN] [lecturer] [main] REFUSED InvalidMarkException: Mark 150 is outside 0..100
+2026-11-26T09:23:54.360-05:00 [INFO] [lecturer] [main] OK published SPC2401
+2026-11-26T09:23:54.433-05:00 [INFO] [lecturer] [main] LIST SPC2401: 2 mark(s)
+2026-11-26T09:23:54.446-05:00 [INFO] [lecturer] [main]   KYU001 SPC2401 = 78 (published) @ 2026-11-26T14:23:53.953Z
+2026-11-26T09:23:54.447-05:00 [INFO] [lecturer] [main]   KYU002 SPC2401 = 64 (published) @ 2026-11-26T14:23:54.090Z

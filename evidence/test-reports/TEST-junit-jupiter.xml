@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="31" skipped="0" failures="0" errors="0" time="18.305" hostname="FRANCKLINE" timestamp="2026-11-26T09:23:55">
+<properties>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.separator" value="\"/>
+<property name="java.class.path" value="lib/junit-platform-console-standalone-1.10.2.jar"/>
+<property name="java.class.version" value="65.0"/>
+<property name="java.home" value="C:\Users\user\tools\jdk-21.0.13.1+2"/>
+<property name="java.io.tmpdir" value="C:\Users\user\AppData\Local\Temp\"/>
+<property name="java.library.path" value="C:\Users\user\tools\jdk-21.0.13.1+2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\user\tools\jdk-21.0.13.1+2\bin;C:\Users\user\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\user\bin;C:\Python314\Scripts;C:\Python314;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\AppData\Local\Python\bin;C:\Users\user\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files\Git\mingw64\bin;C:\Program Files\GitHub CLI;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+<property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+<property name="java.runtime.version" value="21.0.13.1+2-LTS"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="21"/>
+<property name="java.vendor" value="Eclipse Adoptium"/>
+<property name="java.vendor.url" value="https://adoptium.net/"/>
+<property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+<property name="java.vendor.version" value="Temurin-21.0.13.1+2"/>
+<property name="java.version" value="21.0.13.1"/>
+<property name="java.version.date" value="2026-11-17"/>
+<property name="java.vm.compressedOopsMode" value="Zero based"/>
+<property name="java.vm.info" value="mixed mode, sharing"/>
+<property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="21"/>
+<property name="java.vm.vendor" value="Eclipse Adoptium"/>
+<property name="java.vm.version" value="21.0.13.1+2-LTS"/>
+<property name="jdk.debug" value="release"/>
+<property name="line.separator" value="
+"/>
+<property name="native.encoding" value="Cp1252"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Windows 10"/>
+<property name="os.version" value="10.0"/>
+<property name="path.separator" value=";"/>
+<property name="stderr.encoding" value="Cp1252"/>
+<property name="stdout.encoding" value="UTF-8"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="C:\Users\user\tools\jdk-21.0.13.1+2\bin"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value="amd64"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="lib/junit-platform-console-standalone-1.10.2.jar execute --class-path out/classes;out/test-classes --scan-class-path --reports-dir evidence/test-reports --details=tree --disable-ansi-colors"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="Cp1252"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="sun.os.patch.level" value=""/>
+<property name="user.country" value="US"/>
+<property name="user.dir" value="C:\Users\user\OneDrive\Desktop\ANTIGRAVITY\SPC2401-Group12"/>
+<property name="user.home" value="C:\Users\user"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="user"/>
+<property name="user.script" value=""/>
+<property name="user.timezone" value="America/New_York"/>
+<property name="user.variant" value=""/>
+</properties>
+<testcase name="noKeyCollision()" classname="ke.ac.kyu.campusgrade.server.MarkStoreTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.MarkStoreTest]/[method:noKeyCollision()]
+display-name: U03 composite key: 'KYU0011'+'SPC' never collides with 'KYU001'+'1SPC'
+]]></system-out>
+</testcase>
+<testcase name="originalDeadlocks()" classname="ke.ac.kyu.campusgrade.server.Section4ReproductionTest" time="2.029">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.Section4ReproductionTest]/[method:originalDeadlocks()]
+display-name: D01 original code: callback -> getMark DEADLOCKS (getMark thread stays BLOCKED)
+]]></system-out>
+</testcase>
+<testcase name="badStudentId()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:badStudentId()]
+display-name: TC06 blank or malformed student ID is rejected
+]]></system-out>
+</testcase>
+<testcase name="publishNotifiesRightStudents()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.042">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:publishNotifiesRightStudents()]
+display-name: TC10 publish notifies only subscribed students who have a mark in the unit
+]]></system-out>
+</testcase>
+<testcase name="notificationReachesTwoProcesses()" classname="ke.ac.kyu.campusgrade.integration.MultiProcessIntegrationTest" time="5.259">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.integration.MultiProcessIntegrationTest]/[method:notificationReachesTwoProcesses()]
+display-name: IT01 server + 2 student processes + lecturer process: both students are notified
+]]></system-out>
+</testcase>
+<testcase name="deadListenerRemoved()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.031">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:deadListenerRemoved()]
+display-name: TC11 an unreachable listener is skipped and removed; the others are still told
+]]></system-out>
+</testcase>
+<testcase name="renewAfterExpiry()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:renewAfterExpiry()]
+display-name: TC15 renewing after expiry is refused so the client knows to re-subscribe
+]]></system-out>
+</testcase>
+<testcase name="correction()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.016">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:correction()]
+display-name: TC08 a correction with a new request ID replaces the mark
+]]></system-out>
+</testcase>
+<testcase name="unknown()" classname="ke.ac.kyu.campusgrade.server.MarkStoreTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.MarkStoreTest]/[method:unknown()]
+display-name: U02 unknown student or unit gives empty
+]]></system-out>
+</testcase>
+<testcase name="putGetReplace()" classname="ke.ac.kyu.campusgrade.server.MarkStoreTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.MarkStoreTest]/[method:putGetReplace()]
+display-name: U01 put then get returns the mark; replace returns the old one
+]]></system-out>
+</testcase>
+<testcase name="notPublished()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.062">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:notPublished()]
+display-name: TC02 getMark before publish is refused
+]]></system-out>
+</testcase>
+<testcase name="concurrentPutsLoseNothing()" classname="ke.ac.kyu.campusgrade.server.MarkStoreTest" time="0.187">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.MarkStoreTest]/[method:concurrentPutsLoseNothing()]
+display-name: U05 50 threads x 1,000 puts: no lost update to the counter or the map
+]]></system-out>
+</testcase>
+<testcase name="publishVersioning()" classname="ke.ac.kyu.campusgrade.server.MarkStoreTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.MarkStoreTest]/[method:publishVersioning()]
+display-name: U04 publish is idempotent until the unit changes
+]]></system-out>
+</testcase>
+<testcase name="concurrentClients()" classname="ke.ac.kyu.campusgrade.integration.RmiIntegrationTest" time="0.674">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.integration.RmiIntegrationTest]/[method:concurrentClients()]
+display-name: I01 25 clients submit at once over RMI: no lost update, no deadlock
+]]></system-out>
+</testcase>
+<testcase name="timeoutRetryAppliesOnce()" classname="ke.ac.kyu.campusgrade.integration.RmiIntegrationTest" time="6.476">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.integration.RmiIntegrationTest]/[method:timeoutRetryAppliesOnce()]
+display-name: I05 every attempt times out, yet the request ID makes the mark apply exactly once
+]]></system-out>
+</testcase>
+<testcase name="noServerGivesUp()" classname="ke.ac.kyu.campusgrade.integration.RmiIntegrationTest" time="0.764">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.integration.RmiIntegrationTest]/[method:noServerGivesUp()]
+display-name: I03 no server: client retries with back-off, logs each failure, then gives up
+]]></system-out>
+</testcase>
+<testcase name="normalUse()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.013">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:normalUse()]
+display-name: TC01 normal use: submit 78, publish, getMark returns 78
+]]></system-out>
+</testcase>
+<testcase name="unknownStudent()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.015">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:unknownStudent()]
+display-name: TC05 unknown student gives UnknownStudentException
+]]></system-out>
+</testcase>
+<testcase name="serverAppearsDuringRetry()" classname="ke.ac.kyu.campusgrade.integration.RmiIntegrationTest" time="0.769">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.integration.RmiIntegrationTest]/[method:serverAppearsDuringRetry()]
+display-name: I04 server comes up while the client is retrying: call succeeds on a later attempt
+]]></system-out>
+</testcase>
+<testcase name="publishUnknownUnit()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:publishUnknownUnit()]
+display-name: TC09 publishing a unit with no marks is refused
+]]></system-out>
+</testcase>
+<testcase name="leaseCap()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:leaseCap()]
+display-name: TC16 requested lease is capped at lease.max.ms
+]]></system-out>
+</testcase>
+<testcase name="journalRecovery(Path)" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.073">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:journalRecovery(java.nio.file.Path)]
+display-name: TC17 after a restart the journal restores marks, publication and request IDs
+]]></system-out>
+</testcase>
+<testcase name="unsubscribe()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:unsubscribe()]
+display-name: TC12 an unsubscribed student is not notified
+]]></system-out>
+</testcase>
+<testcase name="republish()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.025">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:republish()]
+display-name: TC13 repeating publish with no change sends nothing; after a correction it notifies again
+]]></system-out>
+</testcase>
+<testcase name="leaseExpiry()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.04">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:leaseExpiry()]
+display-name: TC14 an expired lease is reaped and that student is not notified
+]]></system-out>
+</testcase>
+<testcase name="lostUpdate()" classname="ke.ac.kyu.campusgrade.server.Section4ReproductionTest" time="1.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.Section4ReproductionTest]/[method:lostUpdate()]
+display-name: D03 lost update: original counter vs fixed store, 20 threads x 5,000 submits
+]]></system-out>
+</testcase>
+<testcase name="fixedDoesNotDeadlock()" classname="ke.ac.kyu.campusgrade.server.Section4ReproductionTest" time="0.247">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.Section4ReproductionTest]/[method:fixedDoesNotDeadlock()]
+display-name: D02 fixed implementation: the same callback pattern completes
+]]></system-out>
+</testcase>
+<testcase name="boundaries()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.027">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:boundaries()]
+display-name: TC04 boundaries: -1 and 101 rejected, 0 and 100 accepted
+]]></system-out>
+</testcase>
+<testcase name="callbackCallsGetMark()" classname="ke.ac.kyu.campusgrade.integration.RmiIntegrationTest" time="0.177">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.integration.RmiIntegrationTest]/[method:callbackCallsGetMark()]
+display-name: I02 4.2 fix over RMI: markPublished() calls getMark() and gets 78
+]]></system-out>
+</testcase>
+<testcase name="duplicateRequestAppliedOnce()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.023">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:duplicateRequestAppliedOnce()]
+display-name: TC07 retried submitMark with the same request ID is applied once
+]]></system-out>
+</testcase>
+<testcase name="invalidMark150()" classname="ke.ac.kyu.campusgrade.server.GradeServiceImplTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:ke.ac.kyu.campusgrade.server.GradeServiceImplTest]/[method:invalidMark150()]
+display-name: TC03 invalid mark 150 is rejected and nothing is stored
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

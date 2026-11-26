@@ -1,0 +1,13 @@
+2026-11-26T09:23:50.343-05:00 [INFO] [server] [main] starting GradeService with workers=8, notifierThreads=20, lease=600000ms (max 3600000ms), journal=none
+2026-11-26T09:23:50.837-05:00 [INFO] [server] [main] created RMI registry on port 58733
+2026-11-26T09:23:50.846-05:00 [INFO] [server] [main] GradeService exported and bound at rmi://localhost:58733/GradeService
+2026-11-26T09:23:50.849-05:00 [INFO] [server] [main] server ready; press Ctrl+C to stop
+2026-11-26T09:23:52.590-05:00 [INFO] [server] [RMI TCP Connection(4)-192.168.56.1] subscribe(KYU001) granted 600000 ms lease
+2026-11-26T09:23:52.605-05:00 [INFO] [server] [RMI TCP Connection(3)-192.168.56.1] subscribe(KYU002) granted 600000 ms lease
+2026-11-26T09:23:53.991-05:00 [INFO] [server] [worker-1] submitMark(KYU001, SPC2401, 78) applied req=a9033747-a48a-41bf-bb27-660396ef0328
+2026-11-26T09:23:54.090-05:00 [INFO] [server] [worker-2] submitMark(KYU002, SPC2401, 64) applied req=350442f8-c1b0-48c8-ba16-0b1b99ed479c
+2026-11-26T09:23:54.099-05:00 [WARN] [server] [RMI TCP Connection(6)-192.168.56.1] rejected submitMark(KYU003, SPC2401, 150): Mark 150 is outside 0..100
+2026-11-26T09:23:54.172-05:00 [INFO] [server] [RMI TCP Connection(6)-192.168.56.1] publishMarks(SPC2401): notifying 2 subscribed student(s)
+2026-11-26T09:23:54.487-05:00 [INFO] [server] [RMI TCP Connection(4)-192.168.56.1] unsubscribe(KYU001)
+2026-11-26T09:23:54.490-05:00 [INFO] [server] [notifier-2] publish SPC2401 finished: delivered 2/2, removed [], 298 ms
+2026-11-26T09:23:54.500-05:00 [INFO] [server] [RMI TCP Connection(3)-192.168.56.1] unsubscribe(KYU002)

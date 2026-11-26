@@ -1,0 +1,22 @@
+java=21.0.13.1, os=Windows 10, cores=4
+Thread.sleep(2) really takes 3.02 ms on average
+Thread.sleep(6) really takes 6.72 ms on average
+call,iterations,mean_latency_us,throughput_per_s
+local,2000000,0.5024,1990437
+remote,20000,112.40,8896
+remote/local = 224x
+one-core,1,88.4,365.27,100
+one-core,2,179.4,178.32,200
+one-core,4,246.4,129.89,250
+one-core,8,246.0,130.11,250
+one-core,16,246.0,130.17,250
+all-cores,1,90.4,354.33,100
+all-cores,2,181.4,176.53,200
+all-cores,4,354.8,90.20,400
+all-cores,8,712.7,44.92,800
+all-cores,16,1013.6,31.58,1000
+net_delay_ms,mode,mean_ms
+0,sequential,0.402
+0,concurrent,0.236
+2,sequential,18.448
+2,concurrent,6.265

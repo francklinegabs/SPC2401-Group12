@@ -1,0 +1,7 @@
+notifier_threads,students,callback_ms,calculated_s,measured_s
+20,2000,50,5.0,5.64
+1,2000,50,100.0,106.96
+what,mean
+create+start+join a thread,619.6 us
+start a new JVM process (java -version) and wait,234.0 ms
+ratio,378x

@@ -1,0 +1,11 @@
+mode,workers,throughput_rps,mean_latency_ms,expected_rps
+one-core,1,88.4,365.27,100
+one-core,2,179.4,178.32,200
+one-core,4,246.4,129.89,250
+one-core,8,246.0,130.11,250
+one-core,16,246.0,130.17,250
+all-cores,1,90.4,354.33,100
+all-cores,2,181.4,176.53,200
+all-cores,4,354.8,90.20,400
+all-cores,8,712.7,44.92,800
+all-cores,16,1013.6,31.58,1000

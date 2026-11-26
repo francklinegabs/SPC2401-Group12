@@ -1,0 +1,4 @@
+2026-11-26T08:40:21.960-05:00 [FAILURE] [lecturer] [main] submitMark(KYU002,SPC2401,52) req=22c48fd5-fcc7-4c41-9fb4-11a1c7a6f4c0 attempt 1/4 timed out after 5000 ms (server may still have executed it)
+2026-11-26T08:40:22.451-05:00 [INFO] [lecturer] [main] submitMark(KYU002,SPC2401,52) req=22c48fd5-fcc7-4c41-9fb4-11a1c7a6f4c0 succeeded on attempt 2/4
+2026-11-26T08:40:22.457-05:00 [INFO] [lecturer] [main] OK stored KYU002 SPC2401 = 52 (req 22c48fd5-fcc7-4c41-9fb4-11a1c7a6f4c0)
+2026-11-26T08:40:22.463-05:00 [INFO] [lecturer] [main] OK stored KYU999 SPC2402 = 2 (req d0d192a2-ade7-49a4-8797-e58df8b2abc0)

@@ -1,0 +1,64 @@
+stty: /dev/tty: No such device or address
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+[I01] 25 RMI clients x 2 submits done in 636 ms; submitted=50, SPC2401 marks=25, SPC2402 marks=1
+[D03] expected 100000 | original submitted=65710 (lost 34290), map size=99039 | fixed submitted=100000, size=100000
+[D02] callback fetched mark 78 in 3 ms: no deadlock
+[D01] after 2 s: publisher=WAITING (waiting in join), getMark thread=BLOCKED => DEADLOCK
+[IT01] server, 2 students and lecturer ran as 4 processes; both students notified. Outputs in C:\Users\user\OneDrive\Desktop\ANTIGRAVITY\SPC2401-Group12\evidence\logs\integration
+╷
+├─ JUnit Jupiter ✔
+│  ├─ RmiIntegrationTest ✔
+│  │  ├─ I05 every attempt times out, yet the request ID makes the mark apply exactly onc... ✔
+│  │  ├─ I03 no server: client retries with back-off, logs each failure, then gives up ✔
+│  │  ├─ I02 4.2 fix over RMI: markPublished() calls getMark() and gets 78 ✔
+│  │  ├─ I04 server comes up while the client is retrying: call succeeds on a later attem... ✔
+│  │  └─ I01 25 clients submit at once over RMI: no lost update, no deadlock ✔
+│  ├─ Section4ReproductionTest ✔
+│  │  ├─ D03 lost update: original counter vs fixed store, 20 threads x 5,000 submits ✔
+│  │  ├─ D02 fixed implementation: the same callback pattern completes ✔
+│  │  └─ D01 original code: callback -> getMark DEADLOCKS (getMark thread stays BLOCKED) ✔
+│  ├─ MarkStoreTest ✔
+│  │  ├─ U05 50 threads x 1,000 puts: no lost update to the counter or the map ✔
+│  │  ├─ U03 composite key: 'KYU0011'+'SPC' never collides with 'KYU001'+'1SPC' ✔
+│  │  ├─ U02 unknown student or unit gives empty ✔
+│  │  ├─ U04 publish is idempotent until the unit changes ✔
+│  │  └─ U01 put then get returns the mark; replace returns the old one ✔
+│  ├─ MultiProcessIntegrationTest ✔
+│  │  └─ IT01 server + 2 student processes + lecturer process: both students are notified ✔
+│  └─ GradeServiceImplTest ✔
+│     ├─ TC11 an unreachable listener is skipped and removed; the others are still told ✔
+│     ├─ TC07 retried submitMark with the same request ID is applied once ✔
+│     ├─ TC04 boundaries: -1 and 101 rejected, 0 and 100 accepted ✔
+│     ├─ TC06 blank or malformed student ID is rejected ✔
+│     ├─ TC09 publishing a unit with no marks is refused ✔
+│     ├─ TC13 repeating publish with no change sends nothing; after a correction it notif... ✔
+│     ├─ TC15 renewing after expiry is refused so the client knows to re-subscribe ✔
+│     ├─ TC01 normal use: submit 78, publish, getMark returns 78 ✔
+│     ├─ TC03 invalid mark 150 is rejected and nothing is stored ✔
+│     ├─ TC12 an unsubscribed student is not notified ✔
+│     ├─ TC08 a correction with a new request ID replaces the mark ✔
+│     ├─ TC05 unknown student gives UnknownStudentException ✔
+│     ├─ TC02 getMark before publish is refused ✔
+│     ├─ TC16 requested lease is capped at lease.max.ms ✔
+│     ├─ TC10 publish notifies only subscribed students who have a mark in the unit ✔
+│     ├─ TC14 an expired lease is reaped and that student is not notified ✔
+│     └─ TC17 after a restart the journal restores marks, publication and request IDs ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 18795 ms
+[         8 containers found      ]
+[         0 containers skipped    ]
+[         8 containers started    ]
+[         0 containers aborted    ]
+[         8 containers successful ]
+[         0 containers failed     ]
+[        31 tests found           ]
+[         0 tests skipped         ]
+[        31 tests started         ]
+[         0 tests aborted         ]
+[        31 tests successful      ]
+[         0 tests failed          ]
+

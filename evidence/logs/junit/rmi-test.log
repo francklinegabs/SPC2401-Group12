@@ -1,0 +1,82 @@
+2026-11-26T09:23:37.792-05:00 [INFO] [rmi-test] [main] created RMI registry on port 58669
+2026-11-26T09:23:37.843-05:00 [INFO] [rmi-test] [main] GradeService exported and bound at rmi://localhost:58669/GradeService
+2026-11-26T09:23:38.377-05:00 [FAILURE] [rmi-test] [main] submitMark attempt 1/3 timed out after 500 ms (server may still have executed it)
+2026-11-26T09:23:38.932-05:00 [FAILURE] [rmi-test] [main] submitMark attempt 2/3 timed out after 500 ms (server may still have executed it)
+2026-11-26T09:23:39.462-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU001, SPC2401, 78) applied req=fixed-req-1
+2026-11-26T09:23:39.537-05:00 [FAILURE] [rmi-test] [main] submitMark attempt 3/3 timed out after 500 ms (server may still have executed it)
+2026-11-26T09:23:39.538-05:00 [FAILURE] [rmi-test] [main] submitMark gave up after 3 attempts
+2026-11-26T09:23:39.669-05:00 [INFO] [rmi-test] [worker-2] duplicate submitMark request fixed-req-1 (KYU001, SPC2401) ignored: already applied
+2026-11-26T09:23:40.270-05:00 [INFO] [rmi-test] [worker-3] duplicate submitMark request fixed-req-1 (KYU001, SPC2401) ignored: already applied
+2026-11-26T09:23:43.700-05:00 [INFO] [rmi-test] [main] GradeService stopped
+2026-11-26T09:23:43.791-05:00 [FAILURE] [rmi-test] [main] getMark attempt 1/4 failed [connection refused: not executed]: ConnectException caused by ConnectException (Connection refused: connect)
+2026-11-26T09:23:43.897-05:00 [FAILURE] [rmi-test] [main] getMark attempt 2/4 failed [connection refused: not executed]: ConnectException caused by ConnectException (Connection refused: connect)
+2026-11-26T09:23:44.105-05:00 [FAILURE] [rmi-test] [main] getMark attempt 3/4 failed [connection refused: not executed]: ConnectException caused by ConnectException (Connection refused: connect)
+2026-11-26T09:23:44.513-05:00 [FAILURE] [rmi-test] [main] getMark attempt 4/4 failed [connection refused: not executed]: ConnectException caused by ConnectException (Connection refused: connect)
+2026-11-26T09:23:44.522-05:00 [FAILURE] [rmi-test] [main] getMark gave up after 4 attempts
+2026-11-26T09:23:44.638-05:00 [INFO] [rmi-test] [main] created RMI registry on port 58680
+2026-11-26T09:23:44.644-05:00 [INFO] [rmi-test] [main] GradeService exported and bound at rmi://localhost:58680/GradeService
+2026-11-26T09:23:44.694-05:00 [INFO] [rmi-test] [RMI TCP Connection(4)-192.168.56.1] subscribe(KYU001) granted 600000 ms lease
+2026-11-26T09:23:44.700-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU001, SPC2401, 78) applied
+2026-11-26T09:23:44.705-05:00 [INFO] [rmi-test] [RMI TCP Connection(4)-192.168.56.1] publishMarks(SPC2401): notifying 1 subscribed student(s)
+2026-11-26T09:23:44.721-05:00 [INFO] [rmi-test] [main] GradeService stopped
+2026-11-26T09:23:44.726-05:00 [INFO] [rmi-test] [notifier-1] publish SPC2401 finished: delivered 1/1, removed [], 13 ms
+2026-11-26T09:23:44.737-05:00 [FAILURE] [rmi-test] [main] listMarks attempt 1/9 failed [connection refused: not executed]: ConnectException caused by ConnectException (Connection refused: connect)
+2026-11-26T09:23:44.941-05:00 [FAILURE] [rmi-test] [main] listMarks attempt 2/9 failed [connection refused: not executed]: ConnectException caused by ConnectException (Connection refused: connect)
+2026-11-26T09:23:45.146-05:00 [INFO] [rmi-test] [ForkJoinPool.commonPool-worker-1] created RMI registry on port 58682
+2026-11-26T09:23:45.151-05:00 [INFO] [rmi-test] [ForkJoinPool.commonPool-worker-1] GradeService exported and bound at rmi://localhost:58682/GradeService
+2026-11-26T09:23:45.160-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU001, SPC2401, 66) applied
+2026-11-26T09:23:45.494-05:00 [INFO] [rmi-test] [main] listMarks succeeded on attempt 3/9
+2026-11-26T09:23:45.496-05:00 [INFO] [rmi-test] [main] GradeService stopped
+2026-11-26T09:23:45.505-05:00 [INFO] [rmi-test] [main] created RMI registry on port 58686
+2026-11-26T09:23:45.506-05:00 [INFO] [rmi-test] [main] GradeService exported and bound at rmi://localhost:58686/GradeService
+2026-11-26T09:23:45.939-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU020, SPC2401, 59) applied req=own-19
+2026-11-26T09:23:45.953-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU013, SPC2401, 52) applied req=own-12
+2026-11-26T09:23:45.964-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU021, SPC2401, 60) applied req=own-20
+2026-11-26T09:23:46.006-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU025, SPC2401, 64) applied req=own-24
+2026-11-26T09:23:46.010-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU999, SPC2402, 24) applied req=shared-24
+2026-11-26T09:23:46.011-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU018, SPC2401, 57) applied req=own-17
+2026-11-26T09:23:46.020-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 17) applied req=shared-17 (replaced 24)
+2026-11-26T09:23:46.026-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU024, SPC2401, 63) applied req=own-23
+2026-11-26T09:23:46.027-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU003, SPC2401, 42) applied req=own-2
+2026-11-26T09:23:46.033-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 23) applied req=shared-23 (replaced 17)
+2026-11-26T09:23:46.034-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU999, SPC2402, 2) applied req=shared-2 (replaced 23)
+2026-11-26T09:23:46.039-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU015, SPC2401, 54) applied req=own-14
+2026-11-26T09:23:46.041-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 14) applied req=shared-14 (replaced 2)
+2026-11-26T09:23:46.047-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU011, SPC2401, 50) applied req=own-10
+2026-11-26T09:23:46.051-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU999, SPC2402, 10) applied req=shared-10 (replaced 14)
+2026-11-26T09:23:46.052-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU002, SPC2401, 41) applied req=own-1
+2026-11-26T09:23:46.057-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU999, SPC2402, 1) applied req=shared-1 (replaced 10)
+2026-11-26T09:23:46.063-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU014, SPC2401, 53) applied req=own-13
+2026-11-26T09:23:46.063-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU023, SPC2401, 62) applied req=own-22
+2026-11-26T09:23:46.069-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU006, SPC2401, 45) applied req=own-5
+2026-11-26T09:23:46.070-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU999, SPC2402, 22) applied req=shared-22 (replaced 13)
+2026-11-26T09:23:46.072-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU012, SPC2401, 51) applied req=own-11
+2026-11-26T09:23:46.072-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU005, SPC2401, 44) applied req=own-4
+2026-11-26T09:23:46.076-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 13) applied req=shared-13 (replaced 1)
+2026-11-26T09:23:46.079-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 5) applied req=shared-5 (replaced 22)
+2026-11-26T09:23:46.080-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU999, SPC2402, 11) applied req=shared-11 (replaced 5)
+2026-11-26T09:23:46.085-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU999, SPC2402, 4) applied req=shared-4 (replaced 11)
+2026-11-26T09:23:46.100-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU010, SPC2401, 49) applied req=own-9
+2026-11-26T09:23:46.101-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU009, SPC2401, 48) applied req=own-8
+2026-11-26T09:23:46.103-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 9) applied req=shared-9 (replaced 4)
+2026-11-26T09:23:46.104-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU999, SPC2402, 8) applied req=shared-8 (replaced 9)
+2026-11-26T09:23:46.105-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU016, SPC2401, 55) applied req=own-15
+2026-11-26T09:23:46.109-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 15) applied req=shared-15 (replaced 8)
+2026-11-26T09:23:46.111-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU007, SPC2401, 46) applied req=own-6
+2026-11-26T09:23:46.111-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU022, SPC2401, 61) applied req=own-21
+2026-11-26T09:23:46.114-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU999, SPC2402, 6) applied req=shared-6 (replaced 15)
+2026-11-26T09:23:46.118-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU004, SPC2401, 43) applied req=own-3
+2026-11-26T09:23:46.119-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 21) applied req=shared-21 (replaced 6)
+2026-11-26T09:23:46.119-05:00 [INFO] [rmi-test] [worker-4] submitMark(KYU999, SPC2402, 19) applied req=shared-19 (replaced 21)
+2026-11-26T09:23:46.123-05:00 [INFO] [rmi-test] [worker-2] submitMark(KYU999, SPC2402, 3) applied req=shared-3 (replaced 19)
+2026-11-26T09:23:46.124-05:00 [INFO] [rmi-test] [worker-6] submitMark(KYU999, SPC2402, 20) applied req=shared-20 (replaced 3)
+2026-11-26T09:23:46.125-05:00 [INFO] [rmi-test] [worker-7] submitMark(KYU001, SPC2401, 40) applied req=own-0
+2026-11-26T09:23:46.126-05:00 [INFO] [rmi-test] [worker-8] submitMark(KYU017, SPC2401, 56) applied req=own-16
+2026-11-26T09:23:46.128-05:00 [INFO] [rmi-test] [worker-3] submitMark(KYU999, SPC2402, 0) applied req=shared-0 (replaced 20)
+2026-11-26T09:23:46.129-05:00 [INFO] [rmi-test] [worker-1] submitMark(KYU999, SPC2402, 16) applied req=shared-16 (replaced 0)
+2026-11-26T09:23:46.132-05:00 [INFO] [rmi-test] [worker-5] submitMark(KYU999, SPC2402, 12) applied req=shared-12 (replaced 16)
+2026-11-26T09:23:46.136-05:00 [INFO] [rmi-test] [worker-4] submitMark(KYU008, SPC2401, 47) applied req=own-7
+2026-11-26T09:23:46.138-05:00 [INFO] [rmi-test] [worker-4] submitMark(KYU019, SPC2401, 58) applied req=own-18
+2026-11-26T09:23:46.139-05:00 [INFO] [rmi-test] [worker-4] submitMark(KYU999, SPC2402, 7) applied req=shared-7 (replaced 12)
+2026-11-26T09:23:46.142-05:00 [INFO] [rmi-test] [worker-7] submitMark(KYU999, SPC2402, 18) applied req=shared-18 (replaced 7)
+2026-11-26T09:23:46.174-05:00 [INFO] [rmi-test] [main] GradeService stopped

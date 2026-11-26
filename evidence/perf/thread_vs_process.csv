@@ -1,0 +1,4 @@
+what,mean
+create+start+join a thread,619.6 us
+start a new JVM process (java -version) and wait,234.0 ms
+ratio,378x
