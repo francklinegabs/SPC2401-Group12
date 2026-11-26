@@ -49,3 +49,4 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 25. [What does Validation check, and why before any work?](25-what-does-validation-check-and-why-before-any-work.md)
 26. [Why are Lease and MarkRecord immutable?](26-why-are-lease-and-markrecord-immutable.md)
 27. [Why does MarkRecord have withPublished?](27-why-does-markrecord-have-withpublished.md)
+28. [Why does GradeServiceImpl have no synchronized methods?](28-why-does-gradeserviceimpl-have-no-synchronized-met.md)
