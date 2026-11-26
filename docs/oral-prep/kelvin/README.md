@@ -8,3 +8,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 2. [How is the lease length decided?](02-how-is-the-lease-length-decided.md)
 3. [What happens when a student subscribes twice?](03-what-happens-when-a-student-subscribes-twice.md)
 4. [What does renew() do when the lease has already run out?](04-what-does-renew-do-when-the-lease-has-already-run.md)
+5. [Why does remove() take the Subscription object, not just the ID?](05-why-does-remove-take-the-subscription-object-not-j.md)
