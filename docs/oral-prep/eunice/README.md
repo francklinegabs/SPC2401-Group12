@@ -26,3 +26,7 @@ One question per card, answered from my own package (WP3) and report Sections 3 
 14. [Why did D01 originally fail with IllegalThreadStateException?](14-why-did-d01-originally-fail-with-illegalthreadstat.md)
 15. [What does D02 show?](15-what-does-d02-show.md)
 16. [What does D03 compare?](16-what-does-d03-compare.md)
+
+## Section 3 – OS types, processes and threads
+
+17. [Rate a network OS for 'hides where GradeService runs'.](17-rate-a-network-os-for-hides-where-gradeservice-run.md)
