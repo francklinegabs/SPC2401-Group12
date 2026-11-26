@@ -30,3 +30,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 18. [When is the lease renewed?](18-when-is-the-lease-renewed.md)
 19. [What happens after a lost lease?](19-what-happens-after-a-lost-lease.md)
 20. [Why fetch the mark inside markPublished?](20-why-fetch-the-mark-inside-markpublished.md)
+21. [What does the student log when notified?](21-what-does-the-student-log-when-notified.md)
