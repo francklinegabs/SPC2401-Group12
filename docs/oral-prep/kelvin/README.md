@@ -33,3 +33,7 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 21. [What does the student log when notified?](21-what-does-the-student-log-when-notified.md)
 22. [What does client.callback.hostname solve?](22-what-does-client-callback-hostname-solve.md)
 23. [What does the student do on exit?](23-what-does-the-student-do-on-exit.md)
+
+## Section 2 – notification, middleware and the OS
+
+24. [Name our three event types and how each is delivered.](24-name-our-three-event-types-and-how-each-is-deliver.md)
