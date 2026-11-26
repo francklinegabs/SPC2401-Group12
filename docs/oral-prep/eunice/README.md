@@ -30,3 +30,4 @@ One question per card, answered from my own package (WP3) and report Sections 3 
 ## Section 3 – OS types, processes and threads
 
 17. [Rate a network OS for 'hides where GradeService runs'.](17-rate-a-network-os-for-hides-where-gradeservice-run.md)
+18. [Rate a distributed OS for 'each campus server stays autonomous'.](18-rate-a-distributed-os-for-each-campus-server-stays.md)
