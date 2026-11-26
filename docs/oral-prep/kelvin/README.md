@@ -42,3 +42,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 27. [Which layer turns a mark into bytes, and which finds GradeService by name?](27-which-layer-turns-a-mark-into-bytes-and-which-find.md)
 28. [Which layer schedules threads and sends TCP packets?](28-which-layer-schedules-threads-and-sends-tcp-packet.md)
 29. [Where would the lecturer-permission check go?](29-where-would-the-lecturer-permission-check-go.md)
+30. [Which transparency can a network OS not fully give, with a KYU example?](30-which-transparency-can-a-network-os-not-fully-give.md)
