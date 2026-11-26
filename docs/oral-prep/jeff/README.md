@@ -19,3 +19,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 10. [Why was that class-path trick needed?](10-why-was-that-class-path-trick-needed.md)
 11. [What does test I01 check?](11-what-does-test-i01-check.md)
 12. [What does test I05 check?](12-what-does-test-i05-check.md)
+13. [What does test I04 check?](13-what-does-test-i04-check.md)
