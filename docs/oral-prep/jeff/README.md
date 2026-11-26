@@ -25,3 +25,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 
 14. [How were 20 or more clients run at once?](14-how-were-20-or-more-clients-run-at-once.md)
 15. [What did killing the server before storing show (A1)?](15-what-did-killing-the-server-before-storing-show-a1.md)
+16. [What did killing the server after storing show (A2)?](16-what-did-killing-the-server-after-storing-show-a2.md)
