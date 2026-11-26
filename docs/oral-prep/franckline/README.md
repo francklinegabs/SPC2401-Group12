@@ -38,3 +38,7 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 20. [Explain the deadlock in 4.2 in one breath.](20-explain-the-deadlock-in-4-2-in-one-breath.md)
 21. [Which of the four deadlock conditions does our fix break?](21-which-of-the-four-deadlock-conditions-does-our-fix.md)
 22. [How did we prove the deadlock and the fix?](22-how-did-we-prove-the-deadlock-and-the-fix.md)
+
+## Section 5 – Amoeba
+
+23. [Map the lecturer's PC and the server host onto Amoeba.](23-map-the-lecturer-s-pc-and-the-server-host-onto-amo.md)
