@@ -34,3 +34,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 ## Performance (7.4)
 
 21. [How much slower is a remote call than a local one?](21-how-much-slower-is-a-remote-call-than-a-local-one.md)
+22. [What throughput did 1, 2, 4, 8 and 16 workers give on one core?](22-what-throughput-did-1-2-4-8-and-16-workers-give-on.md)
