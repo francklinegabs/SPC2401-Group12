@@ -14,3 +14,4 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 5. [Step 1 of the trace: what does the lecturer's code do?](05-step-1-of-the-trace-what-does-the-lecturer-s-code.md)
 6. [Step 2: what does the client stub do?](06-step-2-what-does-the-client-stub-do.md)
 7. [Step 3: what does the communication module do?](07-step-3-what-does-the-communication-module-do.md)
+8. [Step 4: what does the dispatcher (skeleton) do?](08-step-4-what-does-the-dispatcher-skeleton-do.md)
