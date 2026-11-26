@@ -1,0 +1,4 @@
+2026-11-26T08:40:21.916-05:00 [FAILURE] [lecturer] [main] submitMark(KYU004,SPC2401,54) req=714c2ba2-6532-4b76-83dd-356e6207bcda attempt 1/4 timed out after 5000 ms (server may still have executed it)
+2026-11-26T08:40:22.479-05:00 [INFO] [lecturer] [main] submitMark(KYU004,SPC2401,54) req=714c2ba2-6532-4b76-83dd-356e6207bcda succeeded on attempt 2/4
+2026-11-26T08:40:22.487-05:00 [INFO] [lecturer] [main] OK stored KYU004 SPC2401 = 54 (req 714c2ba2-6532-4b76-83dd-356e6207bcda)
+2026-11-26T08:40:22.491-05:00 [INFO] [lecturer] [main] OK stored KYU999 SPC2402 = 4 (req 5edde0c6-5b92-4f54-807c-2957ba89c5d9)

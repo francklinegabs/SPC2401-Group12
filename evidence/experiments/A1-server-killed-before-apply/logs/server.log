@@ -1,0 +1,9 @@
+2026-11-26T08:40:27.572-05:00 [INFO] [server] [main] starting GradeService with workers=8, notifierThreads=20, lease=600000ms (max 3600000ms), journal=evidence\experiments\A1-server-killed-before-apply\marks.journal, sim cpu=0ms disk=4000ms cores=0 postApply=0ms
+2026-11-26T08:40:28.128-05:00 [INFO] [server] [main] created RMI registry on port 56590
+2026-11-26T08:40:28.148-05:00 [INFO] [server] [main] GradeService exported and bound at rmi://localhost:56590/GradeService
+2026-11-26T08:40:28.152-05:00 [INFO] [server] [main] server ready; press Ctrl+C to stop
+2026-11-26T08:40:31.934-05:00 [INFO] [server] [main] starting GradeService with workers=8, notifierThreads=20, lease=600000ms (max 3600000ms), journal=evidence\experiments\A1-server-killed-before-apply\marks.journal
+2026-11-26T08:40:32.481-05:00 [INFO] [server] [main] created RMI registry on port 56590
+2026-11-26T08:40:32.496-05:00 [INFO] [server] [main] GradeService exported and bound at rmi://localhost:56590/GradeService
+2026-11-26T08:40:32.500-05:00 [INFO] [server] [main] server ready; press Ctrl+C to stop
+2026-11-26T08:40:34.463-05:00 [INFO] [server] [worker-1] submitMark(KYU001, SPC2401, 78) applied req=bf9eb0be-d9bd-48c4-8f22-07ba1e690091

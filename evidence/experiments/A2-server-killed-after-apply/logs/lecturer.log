@@ -1,0 +1,6 @@
+2026-11-26T08:40:39.608-05:00 [FAILURE] [lecturer] [main] submitMark(KYU001,SPC2401,78) req=e3bd49bc-4a81-4390-b11b-2dd9e91acc9d attempt 1/5 failed [connection lost during call: may have executed]: UnmarshalException caused by SocketException (Connection reset)
+2026-11-26T08:40:40.648-05:00 [FAILURE] [lecturer] [main] submitMark(KYU001,SPC2401,78) req=e3bd49bc-4a81-4390-b11b-2dd9e91acc9d attempt 2/5 failed [connection refused: not executed]: ConnectException caused by ConnectException (Connection refused: connect)
+2026-11-26T08:40:42.850-05:00 [INFO] [lecturer] [main] submitMark(KYU001,SPC2401,78) req=e3bd49bc-4a81-4390-b11b-2dd9e91acc9d succeeded on attempt 3/5
+2026-11-26T08:40:42.862-05:00 [INFO] [lecturer] [main] OK stored KYU001 SPC2401 = 78 (req e3bd49bc-4a81-4390-b11b-2dd9e91acc9d)
+2026-11-26T08:40:44.554-05:00 [INFO] [lecturer] [main] LIST SPC2401: 1 mark(s)
+2026-11-26T08:40:44.602-05:00 [INFO] [lecturer] [main]   KYU001 SPC2401 = 78 (draft) @ 2026-11-26T13:40:39.034Z

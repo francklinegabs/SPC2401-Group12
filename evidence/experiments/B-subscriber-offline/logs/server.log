@@ -1,0 +1,16 @@
+2026-11-26T08:40:45.570-05:00 [INFO] [server] [main] starting GradeService with workers=8, notifierThreads=20, lease=600000ms (max 3600000ms), journal=none
+2026-11-26T08:40:46.352-05:00 [INFO] [server] [main] created RMI registry on port 56621
+2026-11-26T08:40:46.364-05:00 [INFO] [server] [main] GradeService exported and bound at rmi://localhost:56621/GradeService
+2026-11-26T08:40:46.366-05:00 [INFO] [server] [main] server ready; press Ctrl+C to stop
+2026-11-26T08:40:47.904-05:00 [INFO] [server] [RMI TCP Connection(2)-192.168.56.1] subscribe(KYU001) granted 600000 ms lease
+2026-11-26T08:40:49.244-05:00 [INFO] [server] [RMI TCP Connection(4)-192.168.56.1] subscribe(KYU002) granted 600000 ms lease
+2026-11-26T08:40:52.614-05:00 [INFO] [server] [RMI TCP Connection(6)-192.168.56.1] subscribe(KYU003) granted 600000 ms lease
+2026-11-26T08:40:54.566-05:00 [INFO] [server] [worker-1] submitMark(KYU001, SPC2401, 70) applied req=d8f9a364-744d-41b9-bdd3-9414f6a24908
+2026-11-26T08:40:54.894-05:00 [INFO] [server] [worker-2] submitMark(KYU002, SPC2401, 61) applied req=25870c6b-b2a3-4f52-bb64-d499897aadc9
+2026-11-26T08:40:55.266-05:00 [INFO] [server] [worker-3] submitMark(KYU003, SPC2401, 55) applied req=38a62ab9-277f-4cc7-ad21-7c02f350f681
+2026-11-26T08:40:56.945-05:00 [INFO] [server] [RMI TCP Connection(10)-192.168.56.1] publishMarks(SPC2401): notifying 3 subscribed student(s)
+2026-11-26T08:40:59.606-05:00 [FAILURE] [server] [notifier-2] callback markPublished(SPC2401) to KYU002 failed; listener removed: ConnectException caused by ConnectException (Connection refused: getsockopt)
+2026-11-26T08:40:59.632-05:00 [INFO] [server] [notifier-2] publish SPC2401 finished: delivered 2/3, removed [KYU002], 2661 ms
+2026-11-26T08:41:01.510-05:00 [INFO] [server] [worker-6] submitMark(KYU001, SPC2401, 72) applied req=65909a3e-e3c5-4534-8ba4-110bb9723e35 (replaced 70)
+2026-11-26T08:41:01.999-05:00 [INFO] [server] [RMI TCP Connection(12)-192.168.56.1] publishMarks(SPC2401): notifying 2 subscribed student(s)
+2026-11-26T08:41:02.019-05:00 [INFO] [server] [notifier-4] publish SPC2401 finished: delivered 2/2, removed [], 19 ms

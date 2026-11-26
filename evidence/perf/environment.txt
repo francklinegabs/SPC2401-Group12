@@ -1,0 +1,3 @@
+java=21.0.13.1, os=Windows 10, cores=4
+Thread.sleep(2) really takes 3.02 ms on average
+Thread.sleep(6) really takes 6.72 ms on average

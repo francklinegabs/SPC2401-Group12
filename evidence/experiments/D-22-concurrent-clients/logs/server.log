@@ -1,0 +1,56 @@
+2026-11-26T08:40:11.528-05:00 [INFO] [server] [main] starting GradeService with workers=8, notifierThreads=20, lease=600000ms (max 3600000ms), journal=none
+2026-11-26T08:40:11.878-05:00 [INFO] [server] [main] created RMI registry on port 56537
+2026-11-26T08:40:11.886-05:00 [INFO] [server] [main] GradeService exported and bound at rmi://localhost:56537/GradeService
+2026-11-26T08:40:11.889-05:00 [INFO] [server] [main] server ready; press Ctrl+C to stop
+2026-11-26T08:40:14.581-05:00 [INFO] [server] [worker-2] submitMark(KYU001, SPC2401, 51) applied req=b1e2285b-1e12-4949-b155-e74bece3259a
+2026-11-26T08:40:14.584-05:00 [INFO] [server] [worker-1] submitMark(KYU002, SPC2401, 52) applied req=22c48fd5-fcc7-4c41-9fb4-11a1c7a6f4c0
+2026-11-26T08:40:14.918-05:00 [INFO] [server] [worker-3] submitMark(KYU003, SPC2401, 53) applied req=4951dbc0-d66d-40de-94b1-f5c7fb624ac2
+2026-11-26T08:40:16.280-05:00 [INFO] [server] [worker-4] submitMark(KYU005, SPC2401, 55) applied req=92b50cd0-d24e-496a-8e60-d31dd55ef8ed
+2026-11-26T08:40:17.099-05:00 [INFO] [server] [worker-5] submitMark(KYU007, SPC2401, 57) applied req=b5f5c923-5ec5-4768-a62b-67ba6a9958be
+2026-11-26T08:40:17.370-05:00 [INFO] [server] [worker-6] submitMark(KYU999, SPC2402, 7) applied req=da8f54b7-3927-4174-886c-d501160ca908
+2026-11-26T08:40:17.868-05:00 [INFO] [server] [worker-7] submitMark(KYU010, SPC2401, 60) applied req=1b952f97-35f5-41ab-8046-8f2ba3a9685a
+2026-11-26T08:40:18.084-05:00 [INFO] [server] [worker-2] submitMark(KYU999, SPC2402, 10) applied req=8ff74534-b4fa-4d3c-aa24-dabf077481bf (replaced 7)
+2026-11-26T08:40:18.184-05:00 [INFO] [server] [worker-8] submitMark(KYU011, SPC2401, 61) applied req=fadbdb3b-b326-41c3-affa-3d786d8fca09
+2026-11-26T08:40:18.272-05:00 [INFO] [server] [worker-1] submitMark(KYU999, SPC2402, 11) applied req=e38f7ceb-6afd-4ed0-ad86-7d7d6ff846d9 (replaced 10)
+2026-11-26T08:40:19.029-05:00 [INFO] [server] [worker-3] submitMark(KYU012, SPC2401, 62) applied req=050827d5-3301-47b8-bebf-2a71c93d7c96
+2026-11-26T08:40:19.164-05:00 [INFO] [server] [worker-4] submitMark(KYU999, SPC2402, 12) applied req=495bbbdb-f22a-4731-8142-06299b14af1b (replaced 11)
+2026-11-26T08:40:20.469-05:00 [INFO] [server] [worker-5] submitMark(KYU014, SPC2401, 64) applied req=ca21e139-0474-452c-9c02-f3129a46fa3f
+2026-11-26T08:40:20.569-05:00 [INFO] [server] [worker-6] submitMark(KYU999, SPC2402, 14) applied req=c77d5fdb-21ba-45be-b9ee-11d685426297 (replaced 12)
+2026-11-26T08:40:20.920-05:00 [INFO] [server] [worker-7] submitMark(KYU015, SPC2401, 65) applied req=c2975610-dbef-401b-967c-7f4f83050e6d
+2026-11-26T08:40:21.497-05:00 [INFO] [server] [worker-2] submitMark(KYU017, SPC2401, 67) applied req=9914353f-ee1c-46fa-a54a-bed88a55e3ea
+2026-11-26T08:40:21.652-05:00 [INFO] [server] [worker-8] submitMark(KYU999, SPC2402, 17) applied req=b6973563-818c-49da-a06e-f4169901fa0d (replaced 14)
+2026-11-26T08:40:21.703-05:00 [INFO] [server] [worker-1] submitMark(KYU004, SPC2401, 54) applied req=714c2ba2-6532-4b76-83dd-356e6207bcda
+2026-11-26T08:40:21.773-05:00 [INFO] [server] [worker-3] submitMark(KYU018, SPC2401, 68) applied req=28384b5d-f1a3-4d8c-aee7-893331cbbe2d
+2026-11-26T08:40:22.093-05:00 [INFO] [server] [worker-4] submitMark(KYU999, SPC2402, 1) applied req=07dd3e08-8e4d-4723-b143-6f12e1e59e16 (replaced 17)
+2026-11-26T08:40:22.264-05:00 [INFO] [server] [worker-5] submitMark(KYU019, SPC2401, 69) applied req=24587c68-8836-4f4d-8936-9ff420fd1555
+2026-11-26T08:40:22.330-05:00 [INFO] [server] [worker-6] duplicate submitMark request 4951dbc0-d66d-40de-94b1-f5c7fb624ac2 (KYU003, SPC2401) ignored: already applied
+2026-11-26T08:40:22.356-05:00 [INFO] [server] [worker-7] submitMark(KYU999, SPC2402, 3) applied req=5f989c5a-25c2-4a07-b854-c4378288e579 (replaced 1)
+2026-11-26T08:40:22.386-05:00 [INFO] [server] [worker-2] submitMark(KYU999, SPC2402, 19) applied req=0e2a70ac-79cc-4e37-a87a-ddba73a63704 (replaced 3)
+2026-11-26T08:40:22.397-05:00 [INFO] [server] [worker-8] duplicate submitMark request 92b50cd0-d24e-496a-8e60-d31dd55ef8ed (KYU005, SPC2401) ignored: already applied
+2026-11-26T08:40:22.428-05:00 [INFO] [server] [worker-1] submitMark(KYU999, SPC2402, 5) applied req=d362e084-7483-4ba8-b312-3a6b38e2be99 (replaced 19)
+2026-11-26T08:40:22.436-05:00 [INFO] [server] [worker-3] duplicate submitMark request 22c48fd5-fcc7-4c41-9fb4-11a1c7a6f4c0 (KYU002, SPC2401) ignored: already applied
+2026-11-26T08:40:22.459-05:00 [INFO] [server] [worker-4] duplicate submitMark request 714c2ba2-6532-4b76-83dd-356e6207bcda (KYU004, SPC2401) ignored: already applied
+2026-11-26T08:40:22.461-05:00 [INFO] [server] [worker-5] submitMark(KYU999, SPC2402, 2) applied req=d0d192a2-ade7-49a4-8797-e58df8b2abc0 (replaced 5)
+2026-11-26T08:40:22.489-05:00 [INFO] [server] [worker-6] submitMark(KYU999, SPC2402, 4) applied req=5edde0c6-5b92-4f54-807c-2957ba89c5d9 (replaced 2)
+2026-11-26T08:40:22.630-05:00 [INFO] [server] [worker-7] submitMark(KYU020, SPC2401, 70) applied req=b86046b8-cc31-42fa-9800-a884195c8923
+2026-11-26T08:40:22.843-05:00 [INFO] [server] [worker-2] submitMark(KYU999, SPC2402, 20) applied req=66af5ab5-18ba-43f3-bdf4-1a9837463c5f (replaced 4)
+2026-11-26T08:40:22.936-05:00 [INFO] [server] [worker-8] submitMark(KYU022, SPC2401, 72) applied req=c947d5b1-fba6-4e28-9e78-2399a84ba113
+2026-11-26T08:40:22.998-05:00 [INFO] [server] [worker-1] submitMark(KYU021, SPC2401, 71) applied req=050da617-6723-4b63-88a5-cbad97f8328f
+2026-11-26T08:40:23.032-05:00 [INFO] [server] [worker-3] submitMark(KYU999, SPC2402, 22) applied req=e87d27d8-5bbd-4b3d-985e-cfc9967cafed (replaced 20)
+2026-11-26T08:40:23.090-05:00 [INFO] [server] [worker-4] submitMark(KYU999, SPC2402, 21) applied req=ffe22478-94ea-40dd-aa67-781edba081f0 (replaced 22)
+2026-11-26T08:40:23.188-05:00 [INFO] [server] [worker-5] submitMark(KYU009, SPC2401, 59) applied req=84d5e264-bbcc-481c-a1ee-b23e9d8f3248
+2026-11-26T08:40:23.234-05:00 [INFO] [server] [worker-6] submitMark(KYU008, SPC2401, 58) applied req=377d1f40-5f50-481d-af95-886bf65a95e3
+2026-11-26T08:40:23.315-05:00 [INFO] [server] [worker-7] submitMark(KYU006, SPC2401, 56) applied req=6d2bec53-5fa9-4d60-bc7a-04393d793eb8
+2026-11-26T08:40:23.405-05:00 [INFO] [server] [worker-2] submitMark(KYU013, SPC2401, 63) applied req=6f4551c7-5596-4d0e-9e8d-cdf9ab2e95b1
+2026-11-26T08:40:23.893-05:00 [INFO] [server] [worker-8] submitMark(KYU999, SPC2402, 15) applied req=ec9f9053-6cbd-44cd-8e8f-ed6f983ddd5c (replaced 21)
+2026-11-26T08:40:23.918-05:00 [INFO] [server] [worker-1] duplicate submitMark request 377d1f40-5f50-481d-af95-886bf65a95e3 (KYU008, SPC2401) ignored: already applied
+2026-11-26T08:40:23.941-05:00 [INFO] [server] [worker-3] submitMark(KYU999, SPC2402, 8) applied req=ac2cc8c9-5f44-4443-8230-e94f65279017 (replaced 15)
+2026-11-26T08:40:23.946-05:00 [INFO] [server] [worker-4] duplicate submitMark request 84d5e264-bbcc-481c-a1ee-b23e9d8f3248 (KYU009, SPC2401) ignored: already applied
+2026-11-26T08:40:23.979-05:00 [INFO] [server] [worker-5] submitMark(KYU999, SPC2402, 9) applied req=d85d02ac-b975-46df-9e37-c0c09938bc9c (replaced 8)
+2026-11-26T08:40:23.991-05:00 [INFO] [server] [worker-6] duplicate submitMark request 6d2bec53-5fa9-4d60-bc7a-04393d793eb8 (KYU006, SPC2401) ignored: already applied
+2026-11-26T08:40:24.019-05:00 [INFO] [server] [worker-7] submitMark(KYU999, SPC2402, 6) applied req=63610a10-9e01-47ed-9cce-631dce2a8754 (replaced 9)
+2026-11-26T08:40:24.031-05:00 [INFO] [server] [worker-2] duplicate submitMark request 6f4551c7-5596-4d0e-9e8d-cdf9ab2e95b1 (KYU013, SPC2401) ignored: already applied
+2026-11-26T08:40:24.054-05:00 [INFO] [server] [worker-8] submitMark(KYU999, SPC2402, 13) applied req=be3ffd83-2244-49a0-aaa8-7053fcd670a8 (replaced 6)
+2026-11-26T08:40:24.090-05:00 [INFO] [server] [worker-1] submitMark(KYU999, SPC2402, 18) applied req=191d017e-70d0-4644-931c-7853a135a070 (replaced 13)
+2026-11-26T08:40:24.133-05:00 [INFO] [server] [worker-3] submitMark(KYU016, SPC2401, 66) applied req=707a271c-f0ed-4c8d-a272-b14647c284ff
+2026-11-26T08:40:24.267-05:00 [INFO] [server] [worker-4] submitMark(KYU999, SPC2402, 16) applied req=0da64389-748a-4857-83fc-944ad8083cd1 (replaced 18)

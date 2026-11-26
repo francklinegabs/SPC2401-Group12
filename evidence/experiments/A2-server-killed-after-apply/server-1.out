@@ -1,0 +1,5 @@
+2026-11-26T08:40:37.122-05:00 [INFO] [server] [main] starting GradeService with workers=8, notifierThreads=20, lease=600000ms (max 3600000ms), journal=evidence\experiments\A2-server-killed-after-apply\marks.journal, sim cpu=0ms disk=0ms cores=0 postApply=4000ms
+2026-11-26T08:40:37.646-05:00 [INFO] [server] [main] created RMI registry on port 56608
+2026-11-26T08:40:37.657-05:00 [INFO] [server] [main] GradeService exported and bound at rmi://localhost:56608/GradeService
+2026-11-26T08:40:37.660-05:00 [INFO] [server] [main] server ready; press Ctrl+C to stop
+2026-11-26T08:40:39.122-05:00 [INFO] [server] [worker-1] submitMark(KYU001, SPC2401, 78) applied req=e3bd49bc-4a81-4390-b11b-2dd9e91acc9d

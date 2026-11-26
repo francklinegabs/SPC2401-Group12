@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SPC2401 KYUCampusGrade Report</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root { --navy:#1f4e79; --blue:#2e75b6; --line:#9aa9b8; --soft:#eef3f8; --ink:#1b1b1b; }
+  body { font: 10.5pt/1.42 "Segoe UI", Calibri, Arial, sans-serif; color: var(--ink); margin: 0; }
+  h1 { color: var(--navy); font-size: 19pt; margin: 0 0 4px; }
+  h2 { color: #fff; background: var(--navy); font-size: 13pt; padding: 5px 9px; margin: 18px 0 8px; break-after: avoid; }
+  h3 { color: #b0127c; font-size: 11.5pt; margin: 14px 0 5px; break-after: avoid; }
+  p { margin: 4px 0 7px; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; font-size: 9.6pt; break-inside: auto; }
+  tr { break-inside: avoid; }
+  th { background: var(--navy); color: #fff; text-align: left; padding: 5px 6px; font-weight: 600; }
+  td { border: 1px solid var(--line); padding: 4px 6px; vertical-align: top; }
+  td.c, th.c { text-align: center; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  code, pre { font-family: Consolas, "Courier New", monospace; font-size: 8.9pt; }
+  pre { background: #f6f8fa; border: 1px solid #d8dee4; border-left: 4px solid var(--blue); padding: 6px 9px; margin: 6px 0 9px; white-space: pre-wrap; break-inside: avoid; }
+  .calc { background: var(--soft); border-left: 4px solid var(--navy); padding: 6px 10px; margin: 6px 0 9px; break-inside: avoid; }
+  .calc b { color: var(--navy); }
+  .ev { font-size: 8.8pt; color: #4a5a6a; }
+  .ev::before { content: "Evidence: "; font-weight: 700; color: var(--navy); }
+  .good { color: #1d7a35; font-weight: 600; } .part { color: #a76b00; font-weight: 600; } .poor { color: #b3261e; font-weight: 600; }
+  .pb { break-before: page; }
+  figure { margin: 6px 0 10px; text-align: center; break-inside: avoid; }
+  figure img { max-width: 100%; border: 1px solid #d0d7de; }
+  figcaption { font-size: 8.8pt; color: #4a5a6a; margin-top: 3px; }
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; }
+  .cover .unit { color: var(--blue); font-size: 13pt; font-weight: 600; }
+  .cover h1 { font-size: 30pt; margin: 8px 0; }
+  .cover .sub { font-size: 13pt; color: #333; margin-bottom: 26px; }
+  .meta td { border: none; padding: 3px 8px 3px 0; font-size: 10.5pt; }
+  .toc { columns: 2; font-size: 10pt; }
+  .toc div { margin: 2px 0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .sig td { height: 34px; }
+  .small { font-size: 9pt; }
+  .k { font-weight: 600; color: var(--navy); }
+</style>
+</head>
+<body>
+
+<!-- ============================== COVER ============================== -->
+<section class="cover">
+  <div class="unit">KIRINYAGA UNIVERSITY · SPC2401 GROUP ASSIGNMENT</div>
+  <h1>KYUCampusGrade</h1>
+  <div class="sub">A distributed grading service in Java RMI: design answers (Sections 1–5),
+    implementation (Section 6), test report (Section 7) and contribution statement</div>
+  <table class="meta">
+    <tr><td class="k">Group</td><td>Group 12</td></tr>
+    <tr><td class="k">Repository</td><td>github.com/francklinegabs/SPC2401-Group12 · tag <code>v1.0</code> · collaborator <code>ewairi</code></td></tr>
+    <tr><td class="k">Members</td><td>Franckline Were CT101/G/19845/23 · Kelvin Lemaitoi CT101/G/18802/23 · Eunice Gikaru CT101/G/18425/23 ·
+      Ashley Odiwuor CT101/G/18148/23 · Jeff Njuguna CT101/G/18097/23</td></tr>
+    <tr><td class="k">Platform used</td><td>Java 21 (Temurin), Java RMI, JUnit 5.10 · Windows 10, 4 cores · all numbers in this report were measured on it</td></tr>
+  </table>
+  <h3 style="margin-top:28px">Contents</h3>
+  <div class="toc">
+    <div>1 Remote invocation</div><div>2 Notification, middleware and the OS</div>
+    <div>3 OS types, processes and threads</div><div>4 Threads, synchronisation and invocation cost</div>
+    <div>5 Amoeba case study</div><div>6 Implementation summary</div>
+    <div>7 Test report</div><div>8 Contribution statement</div>
+  </div>
+</section>
+
+<!-- ============================== SECTION 1 ============================== -->
+<h2 class="pb">Section 1 – Remote invocation</h2>
+
+<h3>1.1 Trace of submitMark("KYU001", "SPC2401", 78)</h3>
+<svg viewBox="0 0 760 210" width="100%" font-family="Segoe UI, Arial" font-size="10.5">
+  <defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e79"/></marker>
+  <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b0127c"/></marker></defs>
+  <rect x="2" y="2" width="300" height="200" rx="6" fill="#eef3f8" stroke="#9aa9b8"/><text x="12" y="18" font-weight="700" fill="#1f4e79">Lecturer JVM</text>
+  <rect x="455" y="2" width="303" height="200" rx="6" fill="#eef3f8" stroke="#9aa9b8"/><text x="466" y="18" font-weight="700" fill="#1f4e79">Server JVM</text>
+  <g fill="#fff" stroke="#1f4e79"><rect x="12" y="28" width="86" height="34"/><rect x="108" y="28" width="86" height="34"/><rect x="204" y="28" width="90" height="34"/>
+  <rect x="464" y="28" width="90" height="34"/><rect x="564" y="28" width="86" height="34"/><rect x="660" y="28" width="92" height="34"/></g>
+  <g text-anchor="middle" font-weight="600"><text x="55" y="49">1 Client code</text><text x="151" y="44">2 Stub</text><text x="151" y="56">(proxy)</text>
+  <text x="249" y="44">3 Comm.</text><text x="249" y="56">module (TCP)</text><text x="509" y="44">3 Comm.</text><text x="509" y="56">module (TCP)</text>
+  <text x="607" y="44">4 Dispatcher</text><text x="607" y="56">(skeleton)</text><text x="706" y="44">5 GradeService</text><text x="706" y="56">Impl</text></g>
+  <g stroke="#9aa9b8" stroke-dasharray="3 3"><line x1="55" y1="62" x2="55" y2="196"/><line x1="151" y1="62" x2="151" y2="196"/><line x1="249" y1="62" x2="249" y2="196"/>
+  <line x1="509" y1="62" x2="509" y2="196"/><line x1="607" y1="62" x2="607" y2="196"/><line x1="706" y1="62" x2="706" y2="196"/></g>
+  <g stroke="#1f4e79" stroke-width="1.6" marker-end="url(#a1)"><line x1="55" y1="80" x2="149" y2="80"/><line x1="151" y1="96" x2="247" y2="96"/>
+  <line x1="249" y1="112" x2="507" y2="112"/><line x1="509" y1="128" x2="605" y2="128"/><line x1="607" y1="144" x2="704" y2="144"/></g>
+  <g fill="#1f4e79" font-size="9.5"><text x="60" y="76">submitMark(...) local call</text><text x="155" y="92">marshal args</text>
+  <text x="300" y="108">JRMP Call: ObjID + method hash + "KYU001","SPC2401",78</text><text x="513" y="124">find object, unmarshal</text><text x="611" y="140">invoke</text></g>
+  <g stroke="#b0127c" stroke-width="1.6" marker-end="url(#a2)"><line x1="706" y1="162" x2="611" y2="162"/><line x1="607" y1="172" x2="511" y2="172"/>
+  <line x1="509" y1="182" x2="251" y2="182"/><line x1="249" y1="190" x2="153" y2="190"/><line x1="151" y1="196" x2="57" y2="196"/></g>
+  <g fill="#b0127c" font-size="9.5"><text x="612" y="158">6 return (void)</text><text x="300" y="178">JRMP Return: "normal return" byte (or serialised exception)</text></g>
+</svg>
+<table>
+  <tr><th style="width:4%">Step</th><th style="width:17%">Component</th><th style="width:46%">What it does here</th><th>Message held</th></tr>
+  <tr><td class="c">1</td><td>Lecturer client code</td><td><code>LecturerClient.submit</code> makes a request ID, then calls <code>stub.submitMark(...)</code> like a local method through <code>RetryingCaller</code>, which starts the 5 s timeout. The thread blocks until a reply comes.</td><td>A Java call: method <code>submitMark</code> and arguments <code>"KYU001", "SPC2401", 78</code> (plus the request ID).</td></tr>
+  <tr><td class="c">2</td><td>Client stub (proxy)</td><td>The dynamic proxy's <code>UnicastRef.invoke</code> marshals the call. It writes the object ID, a 64-bit hash that names <code>submitMark(String,String,int)</code>, and the arguments, serialised with <code>ObjectOutputStream</code>.</td><td>Request bytes: [ObjID][method hash][TC_STRING "KYU001"][TC_STRING "SPC2401"][int 78].</td></tr>
+  <tr><td class="c">3</td><td>Communication module</td><td>The RMI transport takes a TCP connection to the server's export port from its pool (made by <code>KyuClientSocketFactory</code> with connect and read timeouts) and sends a JRMP <em>Call</em> message. On the server, an "RMI TCP Connection" thread reads it.</td><td>A JRMP Call message (op 0x50 + request bytes) inside one or more TCP segments.</td></tr>
+  <tr><td class="c">4</td><td>Server dispatcher (skeleton)</td><td><code>UnicastServerRef.dispatch</code> looks up the ObjID in the object table and maps the method hash to the <code>Method</code>. It unmarshals the three arguments and calls the method by reflection on the same RMI thread.</td><td>Unmarshalled arguments: fresh copies of <code>"KYU001"</code>, <code>"SPC2401"</code> and <code>78</code> in server memory.</td></tr>
+  <tr><td class="c">5</td><td>GradeService implementation</td><td>Checks 0 ≤ 78 ≤ 100, hands the work to a worker thread, claims the request ID, appends to the journal, and stores (KYU001, SPC2401) → 78 under the write lock.</td><td>Journal line <code>M|req|KYU001|SPC2401|78|t</code> and the map entry <code>Key(KYU001,SPC2401) → 78</code>.</td></tr>
+  <tr><td class="c">6</td><td>Reply path</td><td>The dispatcher writes a JRMP <em>Return</em> (a normal-return byte, with no value for <code>void</code>) back on the same connection. The stub reads it and returns normally. If the server had thrown <code>InvalidMarkException</code>, it is serialised back and re-thrown in the lecturer's thread.</td><td>Return header: normal (or exceptional + serialised exception). The client then releases the connection to the pool.</td></tr>
+</table>
+
+<h3>1.2 Invocation semantics</h3>
+<table>
+  <tr><th style="width:14%">Method</th><th style="width:15%">Semantics</th><th style="width:43%">Justification (idempotence)</th><th>Server must remember</th></tr>
+  <tr><td><code>submitMark</code></td><td><b>At-most-once</b></td><td>Not idempotent: each run adds to the submitted count, and a late retry of "78" would overwrite a newer correction to 80 (TC07).</td><td>A table of request IDs already applied (kept 24 h, journaled so it survives a crash), plus each ID's outcome.</td></tr>
+  <tr><td><code>getMark</code></td><td><b>At-least-once</b></td><td>Idempotent read: running it twice returns the same mark and changes nothing.</td><td>Nothing.</td></tr>
+  <tr><td><code>publishMarks</code></td><td><b>At-least-once</b></td><td>Made idempotent: a repeated publish with no change since the last one sends no second notification (TC13).</td><td>The published version of each unit, so it can tell "already published, nothing changed".</td></tr>
+</table>
+
+<h3>1.3 Parameters</h3>
+<table>
+  <tr><th style="width:30%">Call and parameter</th><th style="width:19%">By value / reference</th><th>What travels</th></tr>
+  <tr><td><code>submitMark: studentId (String)</code></td><td>By value (serialised)</td><td>A copy of the characters "KYU001" (TC_STRING, length 6, UTF bytes); the server works on its own copy.</td></tr>
+  <tr><td><code>publishMarks: unitCode (String)</code></td><td>By value (serialised)</td><td>A copy of "SPC2401" (7 UTF bytes plus a header).</td></tr>
+  <tr><td><code>subscribe: listener (StudentListener)</code></td><td>By remote reference</td><td>Not the object but its stub: the student's IP, export port, object ID, the interface name and our serialised <code>KyuClientSocketFactory</code>. The server calls back over TCP into the student's JVM.</td></tr>
+</table>
+<p><b>If the student's client crashes:</b> the server's stub now points to a dead endpoint. The next <code>markPublished</code> fails with <code>ConnectException</code> (or times out after <code>socket.timeout.ms</code>). The notifier catches this, logs a FAILURE, and removes that subscription without stopping the others. Even if no publish happens, the lease stops being renewed, so the housekeeping thread removes the subscription when the lease expires (experiment B, TC11, TC14).</p>
+
+<h3>1.4 Failures – three causes of a RemoteException from submitMark</h3>
+<table>
+  <tr><th style="width:36%">Cause</th><th style="width:22%">Mark stored?</th><th>Client action</th></tr>
+  <tr><td>1. Server process or host is down, or the service moved (<code>ConnectException: Connection refused</code>, or <code>NotBoundException</code> from the registry).</td><td><b>No</b>: the request never left the client.</td><td>Safe to retry. Look the name up again in the registry (it may now point to a restarted or backup server), with back-off.</td></tr>
+  <tr><td>2. Connection lost during the call: the server crashed or the link dropped (<code>UnmarshalException</code> caused by <code>Connection reset</code>).</td><td><b>Maybe</b>: it may have died before (exp. A1) or after (exp. A2) storing.</td><td>Retry with the <b>same request ID</b>. The server applies it if it is new and ignores it if it was already applied (A2: "duplicate … ignored").</td></tr>
+  <tr><td>3. Timeout: slow network or overloaded server, so no reply within <code>client.timeout.ms</code>.</td><td><b>Maybe</b>, possibly later: the request may still be queued or in flight.</td><td>Retry with the same request ID. If every attempt times out, report "unknown" to the lecturer and check with <code>list</code>/<code>getMark</code>; in exp. C it was in fact stored once.</td></tr>
+</table>
+
+<!-- ============================== SECTION 2 ============================== -->
+<h2 class="pb">Section 2 – Notification, middleware and the OS</h2>
+
+<h3>2.1 Notification design</h3>
+<table>
+  <tr><th style="width:18%">Event type</th><th style="width:20%">Publisher</th><th style="width:28%">Subscribers</th><th style="width:12%">Push / pull</th><th>How it is delivered</th></tr>
+  <tr><td><b>MarksPublished</b>(unit)</td><td>GradeService, when a lecturer calls <code>publishMarks</code></td><td>Subscribed students with a mark in that unit</td><td>Push</td><td>Callback <code>markPublished(unit)</code> from the notifier pool. The mark itself is then <b>pulled</b> with <code>getMark</code>, so no mark travels to the wrong student.</td></tr>
+  <tr><td><b>MarkCorrected</b>(unit)</td><td>GradeService, on a re-publish after a correction</td><td>The same unit's subscribed students</td><td>Push</td><td>Re-publish is sent only if the unit changed since the last publish (unit version), so a plain retry sends nothing.</td></tr>
+  <tr><td><b>LeaseExpired</b>(student)</td><td>Server housekeeping thread</td><td>The student client itself</td><td>Pull</td><td>Not pushed, because the client is probably unreachable. The client learns it when <code>renewLease</code> throws <code>NotSubscribedException</code>, then re-subscribes.</td></tr>
+</table>
+<p><b>Lease:</b> 10 minutes (<code>lease.default.ms = 600000</code>, capped at 1 hour). The client renews every 5 minutes, which is half the lease.</p>
+<p><b>Laptop sleeps for 2 days:</b> renewals stop, so within ≤ 10 min the lease expires and the reaper removes the subscription. No callbacks are wasted on a dead stub, and if a publish arrives first the callback fails and the listener is removed anyway. On waking, the client's next <code>renewLease</code> is refused. The client then re-subscribes and pulls <code>getMark</code> for each of its units (<code>--units</code>), because missed notifications are not queued (TC14, TC15).</p>
+
+<h3>2.2 Sizing the notification</h3>
+<div class="calc">
+<b>(i) One by one in the publishing thread:</b> 2,000 × 50 ms = 100,000 ms = <b>100 s</b><br>
+<b>(ii) Pool of 20 threads:</b> ⌈2,000 / 20⌉ = 100 rounds × 50 ms = 5,000 ms = <b>5 s</b> (20× faster)<br>
+<b>Measured</b> (<code>SizingExperiments</code>, 2,000 listeners that each take 50 ms): 1 thread <b>106.96 s</b>, 20 threads <b>5.64 s</b>.
+</div>
+<p><b>publishMarks should use the pool, asynchronously.</b> The lecturer's call returns at once, all students hear in about 5 s instead of 100 s, and one dead or slow student holds only 1 of the 20 threads instead of delaying everyone behind it. In experiment B, the dead student took 2.6 s to fail while the other two were already notified.</p>
+
+<h3>2.3 Where each task sits in the stack</h3>
+<table>
+  <tr><th style="width:30%">Task</th><th style="width:17%">Layer</th><th>Where in KYUCampusGrade</th></tr>
+  <tr><td>Converting a mark object into bytes</td><td>Middleware</td><td>RMI stub and dispatcher marshalling with Java serialisation of <code>MarkRecord</code>, <code>Lease</code> and the arguments.</td></tr>
+  <tr><td>Finding "GradeService" by name</td><td>Middleware</td><td>RMI registry: <code>GradeServer</code> calls <code>rebind</code>; <code>RetryingCaller.lookup()</code> calls <code>lookup</code>.</td></tr>
+  <tr><td>Scheduling threads on the CPU</td><td>OS</td><td>The kernel scheduler runs our RMI connection, <code>worker-N</code> and <code>notifier-N</code> threads (Java threads are 1:1 kernel threads).</td></tr>
+  <tr><td>Sending packets over TCP</td><td>OS</td><td>The kernel TCP/IP stack sends the JRMP bytes written to the sockets that <code>KyuClientSocketFactory</code> opens.</td></tr>
+  <tr><td>Checking a lecturer may submit marks</td><td>Application</td><td>At the start of <code>GradeServiceImpl.submitMark</code>, beside the existing input checks (a role check is listed as future work in 7.5).</td></tr>
+  <tr><td>Retransmitting a lost request</td><td>OS (lost packets) and middleware/application (lost request)</td><td>Kernel TCP retransmits lost segments; when a whole call is lost, <code>RetryingCaller</code> re-sends it with the same request ID.</td></tr>
+</table>
+
+<h3>2.4 Limits of a network OS</h3>
+<table>
+  <tr><th style="width:26%">Item</th><th>KYU example</th></tr>
+  <tr><td>Transparency RMI gives: <b>access</b></td><td>The student calls <code>service.getMark(...)</code> exactly like a local method; the stub hides marshalling and TCP.</td></tr>
+  <tr><td>Transparency RMI gives: <b>location</b></td><td>Clients ask the registry for "GradeService" and never name the server's host or port in code (host comes from <code>kyu.properties</code>).</td></tr>
+  <tr><td>Cannot fully give: <b>failure</b></td><td>The three Linux servers are separate kernels that know nothing of each other. If server 2 crashes during a submitMark, the lecturer sees a <code>RemoteException</code>, so our client must retry and fail over itself (exp. A1/A2).</td></tr>
+  <tr><td>Kernel feature that would speed it up</td><td><b>Zero-copy message passing</b> (e.g. Linux <code>MSG_ZEROCOPY</code>/<code>io_uring</code>): the kernel sends from the user buffer instead of copying it. This removes the copying cost (0.3 ms per call in 4.4) and some system-call context switches.</td></tr>
+</table>
+
+<!-- ============================== SECTION 3 ============================== -->
+<h2 class="pb">Section 3 – OS types, processes and threads</h2>
+
+<h3>3.1 Name the transparency</h3>
+<table>
+  <tr><th style="width:38%">Problem report</th><th style="width:17%">Transparency violated</th><th>One-line fix</th></tr>
+  <tr><td>Admin moved GradeService to another host and every client broke because the host name was hard-coded.</td><td>Location (migration)</td><td>Bind by name in the registry and read the registry host from configuration/DNS, as <code>Config</code> does.</td></tr>
+  <tr><td>Client code must catch the error and switch to a backup server by hand.</td><td>Failure</td><td>Put fail-over in the middleware: the proxy retries and re-looks up a replica list automatically.</td></tr>
+  <tr><td>Two lecturers' updates to the same mark overwrote each other.</td><td>Concurrency</td><td>Serialise updates under a lock on the server and reject a stale write with a version check.</td></tr>
+  <tr><td>Clients call one method for cached marks and a different one for marks on the server.</td><td>Access</td><td>One <code>getMark</code> interface, with the cache hidden inside the stub/proxy.</td></tr>
+  <tr><td>Marks read from a replica server sometimes show old values after an update.</td><td>Replication</td><td>Acknowledge a write only after all replicas apply it (or read from the primary), using version numbers.</td></tr>
+</table>
+
+<h3>3.2 Choose the OS type</h3>
+<table>
+  <tr><th style="width:31%">Requirement</th><th class="c">Network OS</th><th class="c">Distributed OS</th><th class="c">Multiprocessor OS</th></tr>
+  <tr><td>Hides where GradeService runs</td><td class="c poor">Poor</td><td class="c good">Good</td><td class="c good">Good (one machine)</td></tr>
+  <tr><td>Each campus server stays autonomous</td><td class="c good">Good</td><td class="c poor">Poor</td><td class="c poor">Poor</td></tr>
+  <tr><td>Scales to 20,000 students</td><td class="c good">Good</td><td class="c part">Partial</td><td class="c poor">Poor</td></tr>
+  <tr><td>Survives one node failing</td><td class="c part">Partial</td><td class="c part">Partial</td><td class="c poor">Poor</td></tr>
+</table>
+<p><b>Choice: a network OS (three ordinary Linux servers) with Java RMI middleware.</b> It scores best on autonomy and scale, and the middleware adds back the transparency a NOS lacks: the registry hides the location and our retry layer partly hides failures. A distributed OS would need one special kernel on all three servers, and a multiprocessor OS is a single box, so a single point of failure for the whole campus.</p>
+
+<h3>3.3 Thread architecture: worker pool</h3>
+<div class="calc">Load after publishing: 2,000 requests × 10 ms = <b>20 s of server work</b>, arriving in a burst in the first minutes (average 2,000 / 600 s = 3.3 req/s, peak far higher).
+A pool of 8 workers on 4 cores clears it in about 20 s / 8 = <b>2.5 s</b> of busy time, with memory fixed at 8 thread stacks.</div>
+<p><b>Justification:</b> thread-per-request would create up to 2,000 threads in the burst (about 1 MB of stack each, plus creation cost; 0.62 ms each measured in 3.4). Thread-per-connection ties a thread to each idle student, and thread-per-object would push every request through one thread (20 s queue). A fixed pool bounds threads and memory, queues the burst, and reuses threads so there is no creation cost.</p>
+<p><b>Drawback:</b> when the burst exceeds the pool, requests queue and latency rises, and a request blocked on slow I/O holds a worker. <b>Mitigation:</b> size the pool from the CPU-to-wait ratio (4.3 gives 3 threads per core), keep callbacks on a separate notifier pool so slow students cannot starve request workers (done), and add a client timeout so queued callers retry later (done).</p>
+
+<h3>3.4 Thread or process for the notifier?</h3>
+<table>
+  <tr><th style="width:18%">Aspect</th><th style="width:41%">Thread inside the server process</th><th>Separate process</th></tr>
+  <tr><td>Address space</td><td>Shared: reads the subscription map and the mark store directly.</td><td>Own address space: needs IPC/RMI to get the subscriber list and each publish event.</td></tr>
+  <tr><td>Creation cost</td><td><b>0.62 ms</b> measured (create + start + join); paid once, since the pool reuses threads.</td><td><b>234 ms</b> measured to start a JVM: <b>378×</b> dearer.</td></tr>
+  <tr><td>Context-switch cost</td><td>Low: same page tables, no TLB flush.</td><td>Higher: the address space changes, so TLB/caches are refilled, plus IPC copies.</td></tr>
+  <tr><td>Effect of a crash</td><td>An exception in one callback is caught; a fatal JVM error (e.g. out of memory) takes down the whole server.</td><td>Isolated: the grade server keeps taking marks; only notifications stop until a restart.</td></tr>
+</table>
+<p><b>Decision: a thread pool inside the server.</b> The notifier needs the live subscriber list and runs on every publish, so shared memory and cheap threads win. The isolation risk is reduced by catching every callback failure, socket timeouts, and a bounded pool.</p>
+
+<!-- ============================== SECTION 4 ============================== -->
+<h2 class="pb">Section 4 – Threads, synchronisation and invocation cost</h2>
+
+<h3>Analysis of the given code: race conditions (supports 4.2 and 6.3)</h3>
+<p><b>Lost update.</b> <code>submitMark</code> is not synchronised, so lines (1)–(3) form a read-modify-write that two RMI threads can interleave:</p>
+<table class="small">
+  <tr><th>Time</th><th>Thread A: submitMark(KYU001, …)</th><th>Thread B: submitMark(KYU002, …)</th><th class="n">submitted</th></tr>
+  <tr><td>t1</td><td>(1) old = 5</td><td></td><td class="n">5</td></tr>
+  <tr><td>t2</td><td></td><td>(1) old = 5</td><td class="n">5</td></tr>
+  <tr><td>t3</td><td>(2) put KYU001</td><td>(2) put KYU002 (unsynchronised HashMap)</td><td class="n">5</td></tr>
+  <tr><td>t4</td><td>(3) submitted = 6</td><td></td><td class="n">6</td></tr>
+  <tr><td>t5</td><td></td><td>(3) submitted = 6, so <b>one update is lost</b> (should be 7)</td><td class="n">6</td></tr>
+</table>
+<p>The concurrent <code>marks.put</code> also races with itself and with the synchronised <code>getMark</code> (different locks, so no mutual exclusion), which can lose entries. The key <code>sid + unit</code> is ambiguous too: "KYU0011"+"SPC" equals "KYU001"+"1SPC".
+<span class="ev">Section4ReproductionTest D03 with 20 threads × 5,000 submits: the original lost 34,290 of 100,000 counter updates and kept only 99,039 entries; the fixed store kept 100,000 and 100,000. In other runs the original lost 26,975, 33,233 and 95,443.</span></p>
+<pre>// Fix used in MarkStore: one write lock around the whole read-modify-write, and a composite key
+lock.writeLock().lock();
+try { marks.put(new Key(sid, unit), record); submitted++; }
+finally { lock.writeLock().unlock(); }</pre>
+
+<h3>4.2 Find the deadlock</h3>
+<div class="two">
+<div>
+<ol style="margin:2px 0 6px 18px;padding:0">
+<li>The lecturer's RMI thread <b>T1</b> calls <code>publishMarks("SPC2401")</code> and <b>takes the object's monitor</b> (synchronised method).</li>
+<li>Still holding it, T1 calls <code>l.markPublished(unit)</code> on the student and <b>blocks waiting for the reply</b>.</li>
+<li>Inside <code>markPublished</code>, the student calls <code>getMark(...)</code> on the server. It arrives on another RMI thread, <b>T2</b>.</li>
+<li><code>getMark</code> is synchronised, so <b>T2 waits for the monitor T1 holds</b>.</li>
+<li>T1 waits for the student, the student waits for T2, and T2 waits for T1. That is a <b>circular wait</b> (with mutual exclusion, hold-and-wait and no pre-emption), and RMI has no default timeout, so it lasts forever.</li>
+</ol>
+</div>
+<svg viewBox="0 0 330 190" width="100%" font-family="Segoe UI, Arial" font-size="11">
+  <defs><marker id="d1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker></defs>
+  <rect x="10" y="20" width="120" height="44" rx="6" fill="#eef3f8" stroke="#1f4e79"/><text x="70" y="38" text-anchor="middle" font-weight="700">T1 publishMarks</text><text x="70" y="54" text-anchor="middle" font-size="9.5">holds monitor</text>
+  <rect x="200" y="20" width="120" height="44" rx="6" fill="#fff8e5" stroke="#7f6000"/><text x="260" y="38" text-anchor="middle" font-weight="700">Student JVM</text><text x="260" y="54" text-anchor="middle" font-size="9.5">markPublished()</text>
+  <rect x="105" y="128" width="120" height="44" rx="6" fill="#eef3f8" stroke="#1f4e79"/><text x="165" y="146" text-anchor="middle" font-weight="700">T2 getMark</text><text x="165" y="162" text-anchor="middle" font-size="9.5">BLOCKED on monitor</text>
+  <g stroke="#b3261e" stroke-width="2" fill="none" marker-end="url(#d1)"><path d="M130,38 L198,38"/><path d="M262,64 L215,128"/><path d="M110,128 L68,66"/></g>
+  <g fill="#b3261e" font-size="9.5"><text x="134" y="32">waits for reply</text><text x="246" y="104">waits for getMark</text><text x="8" y="104">waits for lock</text></g>
+</svg>
+</div>
+<p class="ev">Section4ReproductionTest D01 runs the original class with the callback's getMark on a second thread (as RMI does). After 2 s the publisher is WAITING and the getMark thread is BLOCKED, so the deadlock is reproduced.</p>
+<p><b>Fix (used in GradeServiceImpl):</b> never hold a lock while making a remote call. Take a snapshot of the subscribers under the lock, release it, and send the callbacks from the notifier pool. <code>getMark</code> uses the store's read lock, which a publish never holds during a callback.</p>
+<pre>public void publishMarks(String unit) throws RemoteException, UnknownUnitException {
+    List&lt;Subscription&gt; targets;
+    synchronized (applyLock) {                       // short critical section, no remote calls
+        if (store.publish(unit) == UNKNOWN_UNIT) throw new UnknownUnitException(unit);
+        targets = subscriptions.activeFor(store.studentsIn(unit));   // snapshot copy
+    }                                                // lock released here
+    lastPublication = notifier.publish(unit, targets);  // callbacks on notifier-N threads
+}</pre>
+<p class="ev">D02: the same callback pattern finishes and fetches 78 in 3 ms. I02 over real RMI, and the IT01 student processes, also call getMark inside markPublished.</p>
+
+<h3>4.3 Calculate throughput (4 ms CPU + 6 ms disk, single core)</h3>
+<div class="calc">
+<b>(i) One thread:</b> each request takes 4 + 6 = 10 ms and nothing overlaps, so 1,000 / 10 = <b>100 req/s</b> (CPU 40 % busy).<br>
+<b>(ii) Enough kernel threads:</b> while one thread waits 6 ms for the disk, others use the CPU. Threads needed = (4 + 6) / 4 = 2.5, so <b>3 threads</b>.
+The CPU is then 100 % busy, giving 1,000 / 4 = <b>250 req/s</b> (assuming the disk can overlap requests; if it served one at a time it would cap at 1,000 / 6 = 166.7 req/s).<br>
+<b>(iii) User-level threads, blocking read blocks the process:</b> the kernel sees one thread, so every disk wait stops all of them. Again 10 ms per request, so <b>100 req/s</b>.
+</div>
+<p><b>Why more threads than (ii) do not help:</b> at 3 threads the CPU is the bottleneck, at 100 % busy. Extra threads only queue for it and add context switches, memory and lock contention, so throughput stays at 250 and latency rises.
+<span class="ev">Measured in 7.4 (one simulated core): 88 → 179 → 246 → 246 → 246 req/s for 1, 2, 4, 8 and 16 workers.</span></p>
+
+<h3>4.4 Calculate call cost</h3>
+<div class="calc">
+One call = marshalling 0.2 + copying 0.3 + context switches 0.4 + network 1.0 + acknowledgement 0.1 = <b>2.0 ms</b><br>
+<b>One after another:</b> 3 × 2.0 = <b>6.0 ms</b><br>
+<b>Concurrently</b> (server handles them in parallel): the three calls overlap, so total ≈ one call = <b>2.0 ms</b> (3× faster). If the client's own CPU part (0.2 + 0.3 + 0.4 = 0.9 ms) had to run one call at a time on one core, the worst case would be 3 × 0.9 + 1.1 = 3.8 ms.
+</div>
+<table>
+  <tr><th style="width:22%">Cost</th><th style="width:20%">With LRPC (same machine)</th><th>Why</th></tr>
+  <tr><td>Network 1.0 ms</td><td><b>Removed</b></td><td>No network or protocol stack: the call stays inside one kernel.</td></tr>
+  <tr><td>Acknowledgement 0.1 ms</td><td><b>Removed</b></td><td>No transport protocol, so no acknowledgements.</td></tr>
+  <tr><td>Copying 0.3 ms</td><td><b>Mostly removed</b></td><td>Arguments are copied once onto a shared argument stack that both domains map, instead of about four copies.</td></tr>
+  <tr><td>Context switches 0.4 ms</td><td><b>Reduced</b></td><td>The client's thread runs directly in the server's domain, so there is no scheduler dispatch or server thread wake-up, just a domain switch.</td></tr>
+  <tr><td>Marshalling 0.2 ms</td><td><b>Reduced</b></td><td>Simple stubs copy the bytes; no data-representation conversion is needed on the same machine.</td></tr>
+</table>
+<p class="ev">7.4 with 2 ms injected per message: 18.45 ms sequential vs 6.27 ms concurrent, a 2.94× speed-up against the calculated 3×.</p>
+
+<!-- ============================== SECTION 5 ============================== -->
+<h2 class="pb">Section 5 – Amoeba case study</h2>
+
+<h3>5.1 Map KYUCampusGrade onto Amoeba</h3>
+<table>
+  <tr><th style="width:32%">KYUCampusGrade element</th><th>Amoeba equivalent and its role</th></tr>
+  <tr><td>Lecturer's office PC</td><td><b>Workstation / terminal.</b> Runs only the user interface and sends requests; real computing is done in the processor pool.</td></tr>
+  <tr><td>Server host running GradeService</td><td><b>Specialised server machine</b> (like the Bullet file server). It runs the GradeService server process, which listens on its get-port for requests.</td></tr>
+  <tr><td>Registry lookup of "GradeService"</td><td><b>Directory server.</b> Maps the ASCII name "GradeService" to a <b>capability</b> (server port + object + rights + check) that the client then uses.</td></tr>
+  <tr><td>Pool of spare server CPUs</td><td><b>Processor pool.</b> CPUs allocated on demand by the run server, e.g. to start extra GradeService workers during the 2,000-student burst.</td></tr>
+</table>
+
+<h3>5.2 Capabilities: making a read-only capability for students</h3>
+<table class="small">
+  <tr><th>Field (bits)</th><th>Server port (48)</th><th>Object (24)</th><th>Rights (8)</th><th>Check (48)</th></tr>
+  <tr><td>Lecturer (owner) capability</td><td>P = port of GradeService</td><td>17 = SPC2401 marks</td><td><code>0xFF</code> (all)</td><td><code>C</code> = random number stored by the server with object 17</td></tr>
+  <tr><td>Student capability (made by the server)</td><td>P (same)</td><td>17 (same)</td><td><code>0x01</code> (READ only)</td><td><code>f(C ⊕ 0x01)</code>, where f is a one-way function</td></tr>
+</table>
+<ol style="margin:2px 0 6px 18px;padding:0">
+<li>The lecturer sends the owner capability and the wanted rights mask <code>0x01</code> to the GradeService server (<code>std_restrict</code>).</li>
+<li>The server checks the owner capability (check field equals the stored C). It then builds the new capability with rights = 0x01 and check = f(C ⊕ 0x01), and returns it.</li>
+<li>Students get this capability, for example through the directory server. On every request the server recomputes f(C ⊕ rights) from the rights field and compares it with the check field.</li>
+<li><b>Why a student cannot upgrade it:</b> changing the rights to <code>0x03</code> (READ + WRITE) needs the matching check f(C ⊕ 0x03). Computing that needs C, which never leaves the server, and f cannot be inverted to get C back from f(C ⊕ 0x01). A forged capability fails the comparison and is rejected.</li>
+</ol>
+
+<h3>5.3 Amoeba communication (pseudocode)</h3>
+<div>
+<pre>/* GradeService server: 4 worker threads */
+main():
+    G = random private get-port; P = F(G)   /* public put-port */
+    register "GradeService" -&gt; capability(P, ...) in directory
+    for i in 1..4: thread_create(worker)
+
+worker():
+    loop:
+        getreq(&amp;hdr, req, MAX)      /* blocks for next request on G */
+        switch hdr.h_command:
+          case SUBMIT: check rights(WRITE)
+                       store(req.sid, req.unit, req.mark)
+                       hdr.h_status = STD_OK
+          case GET:    check rights(READ)
+                       rep.mark = lookup(req.sid, req.unit)
+          default:     hdr.h_status = STD_COMMAND
+        putrep(&amp;hdr, rep, len)      /* reply goes to this caller */</pre>
+<pre>/* Lecturer / student client */
+cap = dir_lookup("GradeService")
+hdr.h_port   = cap.port
+hdr.h_priv   = cap.private     /* object, rights, check */
+hdr.h_command = SUBMIT
+req = { "KYU001", "SPC2401", 78 }
+status = trans(&amp;hdr, req, len,
+               &amp;rhdr, rep, MAX)  /* blocking RPC */
+if status &lt; 0: retry trans(...)  /* at-most-once by
+                                    Amoeba RPC */
+if rhdr.h_status != STD_OK: show error</pre>
+</div>
+<p><b>"Marks published" to many students:</b> Amoeba <b>group communication</b>. Students' processes join a group for SPC2401, and the server does one <code>grp_send</code>, which Amoeba delivers reliably and in total order to every member (via the sequencer), instead of 2,000 separate RPCs.</p>
+
+<h3>5.4 Evaluate Amoeba for KYUCampusGrade</h3>
+<table>
+  <tr><th style="width:18%"></th><th>One line each</th></tr>
+  <tr><td class="good">Strength 1</td><td>Capabilities give unforgeable, fine-grained rights (student = READ, lecturer = all) with no ACL lookup on each request.</td></tr>
+  <tr><td class="good">Strength 2</td><td>The processor pool and fast, totally-ordered group communication suit a burst of 2,000 students and a one-to-many "marks published" event.</td></tr>
+  <tr><td class="poor">Weakness 1</td><td>It is a research OS, not compatible with KYU's existing Linux servers, Java software or staff skills, so everything would be rewritten.</td></tr>
+  <tr><td class="poor">Weakness 2</td><td>Capabilities can be copied freely and revoking one student's means changing C for everyone; RPC is blocking-only with no asynchronous calls.</td></tr>
+  <tr><td><b>Lesson kept</b></td><td>Unforgeable signed tokens checked by the server (today's OAuth bearer tokens, signed URLs, macaroons) are Amoeba's check-field idea.</td></tr>
+</table>
+
+<!-- ============================== SECTION 6 ============================== -->
+<h2 class="pb">Section 6 – Implementation summary</h2>
+<p>Full source in <code>/src</code>, build and run steps in <code>README.md</code>. The class diagram below shows the remote interfaces, the listener interface, the serialisable classes and the declared exceptions (6.1).</p>
+<figure><img src="../class-diagram.png" alt="Class diagram"><figcaption>Figure 1 – Class diagram (docs/class-diagram.svg)</figcaption></figure>
+<table class="small">
+  <tr><th style="width:7%">Req.</th><th style="width:47%">How it is met</th><th>Evidence</th></tr>
+  <tr><td>6.1</td><td><code>GradeService</code> and <code>StudentListener</code> extend <code>Remote</code>, and every method declares <code>RemoteException</code>. <code>Lease</code> and <code>MarkRecord</code> are <code>Serializable</code>. <code>GradeServer</code> exports with <code>UnicastRemoteObject.exportObject</code> and calls <code>rebind("GradeService")</code>. The lecturer and student clients call all methods.</td><td>IT01, screenshots 01–03</td></tr>
+  <tr><td>6.2</td><td>Subscriptions carry a 10 min lease, renewed every 5 min and reaped on expiry. A failed callback is logged, removed, and does not stop the others.</td><td>TC10–TC16, exp. B, screenshot 06</td></tr>
+  <tr><td>6.3</td><td>RMI connection threads plus a worker pool. <code>MarkStore</code> uses a read/write lock and the subscriptions use concurrent maps. Callbacks run on a 20-thread notifier pool, with no lock held during a callback.</td><td>U05, I01, D01–D03, exp. D</td></tr>
+  <tr><td>6.4</td><td><code>RetryingCaller</code>: per-attempt timeout, retry with back-off, re-lookup, never retries application errors. A request ID plus the <code>RequestDeduplicator</code> and <code>Journal</code> give at-most-once, even across a crash. Every failure is a timestamped FAILURE line.</td><td>TC07, TC17, I03–I05, exp. A1/A2/C, screenshots 05/07</td></tr>
+  <tr><td>6.5</td><td>Packages api / server / client / common. No host or port in code: <code>Config</code> reads <code>-Dkyu.*</code>, then <code>KYU_*</code>, then <code>config/kyu.properties</code>. The README covers the registry, the server and two clients.</td><td>README.md</td></tr>
+</table>
+
+<!-- ============================== SECTION 7 ============================== -->
+<h2 class="pb">Section 7 – Test report</h2>
+
+<h3>7.1 Test plan (traced to Section 6)</h3>
+<table class="small">
+  <tr><th style="width:6%">ID</th><th style="width:9%">Function</th><th style="width:27%">Input</th><th style="width:22%">Expected</th><th style="width:28%">Actual</th><th style="width:8%" class="c">Result</th></tr>
+  <tr><td>TC01</td><td>6.1 submit/get</td><td>submit(KYU001, SPC2401, 78); publish; getMark</td><td>78</td><td>78</td><td class="c good">Pass</td></tr>
+  <tr><td>TC02</td><td>6.1 getMark</td><td>getMark before publish</td><td>MarkNotPublishedException</td><td>MarkNotPublishedException</td><td class="c good">Pass</td></tr>
+  <tr><td>TC03</td><td>6.1 submit</td><td><b>Invalid mark 150</b></td><td>InvalidMarkException, nothing stored</td><td>InvalidMarkException, store size 0</td><td class="c good">Pass</td></tr>
+  <tr><td>TC04</td><td>6.1 submit</td><td>Marks −1, 101, 0, 100</td><td>−1/101 rejected, 0/100 stored</td><td>2 rejected, 2 stored</td><td class="c good">Pass</td></tr>
+  <tr><td>TC05</td><td>6.1 getMark</td><td><b>Unknown student</b> KYU999</td><td>UnknownStudentException</td><td>UnknownStudentException</td><td class="c good">Pass</td></tr>
+  <tr><td>TC06</td><td>6.1 submit</td><td>Student ID "", null, "KYU|001"</td><td>InvalidMarkException ×3</td><td>InvalidMarkException ×3</td><td class="c good">Pass</td></tr>
+  <tr><td>TC07</td><td>6.4 request ID</td><td>req-1 sent twice; then req-2 = 80; then late req-1 = 78</td><td>Applied once; mark stays 80</td><td>count 1 then 2; mark 80</td><td class="c good">Pass</td></tr>
+  <tr><td>TC08</td><td>6.1 submit</td><td>60 then correction 65</td><td>65 after publish</td><td>65</td><td class="c good">Pass</td></tr>
+  <tr><td>TC09</td><td>6.1 publish</td><td>publishMarks(SPC9999), no marks</td><td>UnknownUnitException</td><td>UnknownUnitException</td><td class="c good">Pass</td></tr>
+  <tr><td>TC10</td><td>6.2 notify</td><td>3 subscribed, 2 have marks</td><td>2 notified, KYU777 not</td><td>delivered 2; KYU777 none</td><td class="c good">Pass</td></tr>
+  <tr><td>TC11</td><td>6.2 dead listener</td><td>KYU001 listener throws ConnectException</td><td>KYU001 removed, KYU002 notified</td><td>delivered 1, removed [KYU001]</td><td class="c good">Pass</td></tr>
+  <tr><td>TC12</td><td>6.2 unsubscribe</td><td>unsubscribe twice, then publish</td><td>No notification, no error</td><td>targets 0</td><td class="c good">Pass</td></tr>
+  <tr><td>TC13</td><td>6.2 republish</td><td>publish, publish again, correct, publish</td><td>1, 1, then 2 notifications</td><td>1, 1, 2</td><td class="c good">Pass</td></tr>
+  <tr><td>TC14</td><td>6.2 lease</td><td>KYU001 asleep 2 days; KYU002 renews every 30 s</td><td>KYU001 reaped, not notified</td><td>KYU001 removed; only KYU002 told</td><td class="c good">Pass</td></tr>
+  <tr><td>TC15</td><td>6.2 lease</td><td>renewLease 1 ms after a 1 s lease ends</td><td>NotSubscribedException</td><td>NotSubscribedException</td><td class="c good">Pass</td></tr>
+  <tr><td>TC16</td><td>6.2 lease</td><td>Request 10,000,000 ms; request 0</td><td>Capped 120,000; default 60,000</td><td>120,000; 60,000</td><td class="c good">Pass</td></tr>
+  <tr><td>TC17</td><td>6.4 journal</td><td>Restart server, re-send req-A</td><td>Marks recovered, req-A not reapplied</td><td>78/55 recovered, count stays 2</td><td class="c good">Pass</td></tr>
+  <tr><td>U05</td><td>6.3 store</td><td>50 threads × 1,000 puts</td><td>50,000 entries, count 50,000</td><td>50,000 / 50,000</td><td class="c good">Pass</td></tr>
+  <tr><td>D01/D02</td><td>6.3 deadlock</td><td>Callback calls getMark (original vs fixed)</td><td>Original deadlocks; fixed completes</td><td>BLOCKED/WAITING; fixed 78 in 3 ms</td><td class="c good">Pass</td></tr>
+  <tr><td>I01</td><td>6.3 concurrency</td><td>25 RMI clients × 2 submits at once</td><td>50 applied, no deadlock</td><td>50 applied in 636 ms</td><td class="c good">Pass</td></tr>
+  <tr><td>I03</td><td>6.4 retry</td><td>No server running</td><td>4 attempts, back-off ≥ 700 ms, give up</td><td>GaveUpException after 4 attempts</td><td class="c good">Pass</td></tr>
+  <tr><td>I05</td><td>6.4 timeout</td><td>Server 1.2 s per call, client timeout 0.5 s, 3 attempts</td><td>Client gives up; server applies once</td><td>submitted = 1, mark 78</td><td class="c good">Pass</td></tr>
+  <tr><td>IT01</td><td>6.1/6.2</td><td>Server + 2 students + lecturer as 4 processes</td><td>Both students notified, read 78 / 64</td><td>NOTIFIED + MARK lines in both</td><td class="c good">Pass</td></tr>
+</table>
+
+<h3>7.2 Unit and integration tests</h3>
+<p><b>31 automated JUnit 5 tests, 31 passed, 0 failed</b> (<code>scripts/test.ps1</code>, run time ≈ 19 s). That is 5 store unit tests, 17 service-logic tests, 3 Section 4 reproductions, 5 RMI tests, and 1 multi-process integration test. In the integration test, <code>MultiProcessIntegrationTest</code> starts the server, students KYU001 and KYU002, and a lecturer as <b>four separate JVM processes</b>. Both students log <code>NOTIFIED marks published for SPC2401</code> and read their own mark, and the server logs <code>delivered 2/2</code>.</p>
+<div class="two">
+<figure><img src="../../evidence/screenshots/02-integration-students.png" alt="students"><figcaption>Screenshot 02 – both student processes notified</figcaption></figure>
+<figure><img src="../../evidence/screenshots/04-junit-summary.png" alt="junit"><figcaption>Screenshot 04 – JUnit summary: 31 successful, 0 failed</figcaption></figure>
+</div>
+
+<h3>7.3 Concurrency and failure</h3>
+<table class="small">
+  <tr><th style="width:21%">Experiment</th><th style="width:44%">What we observed (logs in evidence/experiments)</th><th>Semantics observed</th></tr>
+  <tr><td><b>D</b> 22 lecturer processes submit at once (plus 25 threads in I01)</td><td>44 / 44 OK replies, 44 "applied" lines, 22 marks in SPC2401, and 1 mark for the shared key SPC2402 (last writer wins). 0 FAILURE lines, and every process exited.</td><td>No lost update, no deadlock.</td></tr>
+  <tr><td><b>A1</b> server killed mid-call, before storing</td><td>Attempt 1: <code>UnmarshalException (Connection reset)</code>, "may have executed". Attempt 2: connection refused. Attempt 3 reached the restarted server: applied once, journal holds 1 entry.</td><td>Exactly once (the first attempt did nothing).</td></tr>
+  <tr><td><b>A2</b> server killed after storing, before replying</td><td>Server-1 logged "applied" and was then killed; the client got Connection reset. Server-2 "recovered 1 journal entries … 1 remembered request IDs" and logged "duplicate … ignored". Journal: 1 entry.</td><td><b>At-most-once held across a crash.</b></td></tr>
+  <tr><td><b>B</b> subscribed student taken offline</td><td>Publish to 3: KYU001 and KYU003 got their marks in about 0.3 s. KYU002's callback failed (Connection refused after 2.6 s of Windows connect retries) and was removed: "delivered 2/3, removed [KYU002]". The next publish targeted only 2.</td><td>At-most-once per notification; the offline student pulls on return.</td></tr>
+  <tr><td><b>C</b> added network delay</td><td>300 ms per message: stored, 3.4 s total. 1,500 ms per message with a 2.5 s timeout: all 3 attempts timed out and the client logged GAVE UP. The server <b>applied once</b> and logged 2 "duplicate … ignored"; the 3rd attempt died with the client JVM.</td><td>Server: at-most-once. Client: outcome unknown ("maybe") until it checks.</td></tr>
+</table>
+<p><b>Compared with 1.2:</b> submitMark behaved as at-most-once in A1, A2 and C, as designed. Only the request-ID table makes this true, and only the journal keeps it true across a crash. Experiment C shows the remaining gap: when the client gives up it cannot know the outcome, so the lecturer must verify, exactly as 1.4 cause 3 says. getMark and publishMarks were retried safely (I04, TC13), which matches at-least-once on idempotent calls.</p>
+<div class="two">
+<figure><img src="../../evidence/screenshots/05-A2-crash-after-apply.png" alt="A2"><figcaption>Screenshot 05 – A2: duplicate ignored after restart</figcaption></figure>
+<figure><img src="../../evidence/screenshots/06-B-offline-student.png" alt="B"><figcaption>Screenshot 06 – B: dead listener removed, others delivered</figcaption></figure>
+</div>
+
+<h3>7.4 Performance</h3>
+<table class="small">
+  <tr><th>Call (1 client thread, workers inline)</th><th class="n">Iterations</th><th class="n">Mean latency</th><th class="n">Throughput</th></tr>
+  <tr><td>Local call <code>impl.getMark</code></td><td class="n">2,000,000</td><td class="n">0.50 µs</td><td class="n">1,990,437 /s</td></tr>
+  <tr><td>Remote call through RMI (loopback TCP)</td><td class="n">20,000</td><td class="n">112.40 µs</td><td class="n">8,896 /s</td></tr>
+</table>
+<p>A remote call costs <b>224×</b> a local one (marshalling, two system calls and a thread hand-off on each side), which is why 4.4 tries to cut invocation cost.</p>
+<table class="small">
+  <tr><th rowspan="2">Workers</th><th colspan="3" class="c">1 simulated core (as in 4.3)</th><th colspan="3" class="c">4 real cores</th></tr>
+  <tr><th class="n">Calc. req/s</th><th class="n">Measured req/s</th><th class="n">Mean latency</th><th class="n">Calc. req/s</th><th class="n">Measured req/s</th><th class="n">Mean latency</th></tr>
+  <tr><td>1</td><td class="n">100</td><td class="n">88.4</td><td class="n">365 ms</td><td class="n">100</td><td class="n">90.4</td><td class="n">354 ms</td></tr>
+  <tr><td>2</td><td class="n">200</td><td class="n">179.4</td><td class="n">178 ms</td><td class="n">200</td><td class="n">181.4</td><td class="n">177 ms</td></tr>
+  <tr><td>4</td><td class="n">250</td><td class="n">246.4</td><td class="n">130 ms</td><td class="n">400</td><td class="n">354.8</td><td class="n">90 ms</td></tr>
+  <tr><td>8</td><td class="n">250</td><td class="n">246.0</td><td class="n">130 ms</td><td class="n">800</td><td class="n">712.7</td><td class="n">45 ms</td></tr>
+  <tr><td>16</td><td class="n">250</td><td class="n">246.0</td><td class="n">130 ms</td><td class="n">1,000</td><td class="n">1,013.6</td><td class="n">32 ms</td></tr>
+</table>
+<figure><img src="../../evidence/perf/threads.png" alt="threads graph" style="max-width:92%"><figcaption>Figure 2 – Throughput and latency for 1–16 workers, 32 concurrent clients, 4 ms CPU + 6 ms disk per request</figcaption></figure>
+<div class="two">
+<figure><img src="../../evidence/perf/local_vs_remote.png" alt="local vs remote"><figcaption>Figure 3 – Local vs remote getMark</figcaption></figure>
+<figure><img src="../../evidence/perf/dashboard.png" alt="dashboard"><figcaption>Figure 4 – Dashboard: 3 calls sequential vs concurrent</figcaption></figure>
+</div>
+<p><b>Comparison with 4.3:</b> on one core the curve rises and then stops at <b>246 req/s</b> from 3–4 workers up, against the calculated 250. That confirms "beyond (ii) more threads do not help". With 1 and 2 workers we got 88 and 179, not 100 and 200, because on this Windows PC <code>Thread.sleep(6)</code> really takes <b>6.72 ms</b> and RMI adds about 0.4 ms: 1,000 / (4 + 6.72 + 0.4) = 90 req/s. Latency follows Little's law with 32 clients (W = 32 / X: 32 / 88.4 = 362 ms against 365 ms measured). On 4 real cores the limit moves to 4 × 250 = 1,000 req/s. The tiny excess (1,013.6) is because a busy-wait that is pre-empted counts wall time, not CPU time.</p>
+<p><b>Comparison with 4.4:</b> with 2 ms injected per message, 3 calls took <b>18.45 ms</b> one after another and <b>6.27 ms</b> concurrently: <b>2.94×</b> against the predicted 3×. Each call cost about 6.1 ms rather than 2 ms because the delay is added on every write and Windows rounds 2 ms to 3.02 ms. With no injected delay a call is only about 0.13 ms, so thread hand-off overhead dominates and concurrency gives just 1.7× (0.40 → 0.24 ms).</p>
+
+<h3>7.5 Defects and limits</h3>
+<table class="small">
+  <tr><th style="width:4%">#</th><th style="width:48%">Defect found</th><th>Fix</th></tr>
+  <tr><td>1</td><td>Section 4 code: lost updates (34,290 of 100,000), callback deadlock, and the <code>sid + unit</code> key collision.</td><td>New <code>MarkStore</code> (write lock, composite key) and a <code>publishMarks</code> that releases locks before the notifier runs.</td></tr>
+  <tr><td>2</td><td>Integration test: child JVMs failed with "Could not find or load main class", because the JUnit launcher's class path is not inherited.</td><td><code>Proc.classPath()</code> derives the class folder from the code source.</td></tr>
+  <tr><td>3</td><td>Benchmark: the injected 2 ms delay had no effect, because RMI reused pooled connections opened earlier on its shared anonymous port.</td><td>Give the measured server its own export port.</td></tr>
+  <tr><td>4</td><td>TC14 advanced the clock 2 days in one step, so the "awake" student's lease expired too.</td><td>Model renewals every 30 s across the 2 days.</td></tr>
+  <tr><td>5</td><td>The student client logged "checking for missed marks" after a lost lease but did not check.</td><td>Added <code>--units</code>: after re-subscribing it pulls <code>getMark</code> for each unit.</td></tr>
+  <tr><td>6</td><td>D01 called <code>setDaemon</code> on a running thread (<code>IllegalThreadStateException</code>).</td><td>Set daemon before <code>start()</code>.</td></tr>
+  <tr><td>7</td><td>On a clean rebuild one run in 15 had a test fail: some tests waited a fixed time (2 s, 3 s, a ~3 s retry budget), and that was too short for a cold first start.</td><td>D01, I04, I05 and IT01 now wait for the condition itself, with generous upper limits; afterwards 5 cold rebuilds and the final evidence run all passed 31/31.</td></tr>
+</table>
+<p><b>Limitation 1:</b> every process ran on one Windows PC over loopback. Real packet loss, partitions and LAN latency were not tested; delay was simulated per write inside the socket factory, and Windows timer granularity skews small sleeps. <b>Limitation 2:</b> only one server was tested, using a synthetic workload (simulated 4 ms CPU / 6 ms disk). Replication across the three servers, persistence beyond the journal, and lecturer authentication (2.3) were not tested.</p>
+
+<!-- ============================== SECTION 8 ============================== -->
+<h2 class="pb">Contribution statement</h2>
+<p class="small">Five lines per member. Pull-request numbers and reviews are as recorded in
+<code>github.com/francklinegabs/SPC2401-Group12</code>; each pull request was approved by a different member before it was merged into the protected <code>main</code> branch.</p>
+<table class="small">
+  <tr><th style="width:21%">Member</th><th>What I did</th></tr>
+  <tr><td>Franckline Were<br>CT101/G/19845/23<br>GitHub: francklinegabs<br>WP1 – RMI core, team lead</td><td>1. Created the repository, protected <code>main</code>, invited the team and the lecturer, and opened the seven task issues.<br>2. Pull request #8: repository skeleton, build scripts, the GradeService and StudentListener remote interfaces, Lease, MarkRecord and the exception classes.<br>3. Pull request #12: GradeServiceImpl (no lock held during callbacks, at-most-once submitMark) and GradeServer (export and registry bind).<br>4. Drew the class diagram and wrote report Section 1.<br>5. Reviewed and approved Kelvin's pull requests #11 and #15.</td></tr>
+  <tr><td>Kelvin Lemaitoi<br>CT101/G/18802/23<br>GitHub: Kyrie-ML<br>WP2 – Notification</td><td>1. Pull request #11: SubscriptionManager with leases, renewal and expiry.<br>2. The Notifier thread pool that sends callbacks without holding a lock.<br>3. Unreachable listeners are logged and removed without stopping the others.<br>4. The student client (export, subscribe, renew, re-subscribe, pull missed marks); wrote report Section 2.<br>5. Reviewed and approved Franckline's pull request #14.</td></tr>
+  <tr><td>Eunice Gikaru<br>CT101/G/18425/23<br>GitHub: gikarueunice<br>WP3 – Concurrency</td><td>1. Pull request #10: thread-safe MarkStore (read/write lock, composite key) and the worker pool, with store unit tests.<br>2. Pull request #13: tests that reproduce the Section 4 deadlock and lost update, and show the fix.<br>3. Wrote report Sections 3 and 4.<br>4. Reviewed and approved Ashley's pull requests #9 and #17.<br>5. Reviewed and approved Jeff's pull request #18.</td></tr>
+  <tr><td>Ashley Odiwuor<br>CT101/G/18148/23<br>GitHub: odiwuor-ashley<br>WP4 – Fault handling</td><td>1. Pull request #9: Config (no hard-coded host or port) and the timestamped EventLog.<br>2. RetryingCaller (timeout, retry, back-off, failure classification) and the lecturer client.<br>3. The request-ID deduplicator and the write-ahead journal; wrote report Section 5 (Amoeba).<br>4. Reviewed and approved Franckline's pull request #8.<br>5. Reviewed and approved Eunice's pull requests #10, #13 and #16.</td></tr>
+  <tr><td>Jeff Njuguna<br>CT101/G/18097/23<br>GitHub: JustJeff-hub<br>WP5 – Testing</td><td>1. The test plan and the service tests.<br>2. The RMI and four-process integration tests.<br>3. The concurrency and failure experiments (A1, A2, B, C, D), the benchmark and graphs.<br>4. The README and report Section 7, and assembled the PDF.<br>5. Reviewed and approved Franckline's pull request #12.</td></tr>
+</table>
+<p><b>Signed by all members</b> – we confirm the statement above is accurate.</p>
+<table class="sig">
+  <tr><th style="width:34%">Name</th><th style="width:22%">Registration number</th><th style="width:26%">Signature</th><th>Date</th></tr>
+  <tr><td>Franckline Were</td><td>CT101/G/19845/23</td><td></td><td></td></tr>
+  <tr><td>Kelvin Lemaitoi</td><td>CT101/G/18802/23</td><td></td><td></td></tr>
+  <tr><td>Eunice Gikaru</td><td>CT101/G/18425/23</td><td></td><td></td></tr>
+  <tr><td>Ashley Odiwuor</td><td>CT101/G/18148/23</td><td></td><td></td></tr>
+  <tr><td>Jeff Njuguna</td><td>CT101/G/18097/23</td><td></td><td></td></tr>
+</table>
+
+</body>
+</html>

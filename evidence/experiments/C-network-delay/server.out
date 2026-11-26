@@ -1,0 +1,9 @@
+2026-11-26T08:41:02.731-05:00 [INFO] [server] [main] starting GradeService with workers=8, notifierThreads=20, lease=600000ms (max 3600000ms), journal=none
+2026-11-26T08:41:03.181-05:00 [INFO] [server] [main] created RMI registry on port 56650
+2026-11-26T08:41:03.194-05:00 [INFO] [server] [main] GradeService exported and bound at rmi://localhost:56650/GradeService
+2026-11-26T08:41:03.197-05:00 [INFO] [server] [main] server ready; press Ctrl+C to stop
+2026-11-26T08:41:04.891-05:00 [INFO] [server] [worker-1] submitMark(KYU001, SPC2401, 60) applied req=b76e841d-8152-4417-9b6d-ab33abdd12dd
+2026-11-26T08:41:07.765-05:00 [INFO] [server] [worker-2] submitMark(KYU002, SPC2401, 61) applied req=d8c0b87d-72a9-4df6-83af-7304c39f32a2
+2026-11-26T08:41:11.807-05:00 [INFO] [server] [worker-3] submitMark(KYU003, SPC2401, 62) applied req=7ff3666b-944a-4dd7-8218-e2f2012992c2
+2026-11-26T08:41:13.580-05:00 [INFO] [server] [worker-4] duplicate submitMark request 7ff3666b-944a-4dd7-8218-e2f2012992c2 (KYU003, SPC2401) ignored: already applied
+2026-11-26T08:41:14.964-05:00 [INFO] [server] [worker-5] duplicate submitMark request 7ff3666b-944a-4dd7-8218-e2f2012992c2 (KYU003, SPC2401) ignored: already applied

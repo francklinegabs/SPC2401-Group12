@@ -1,0 +1,11 @@
+2026-11-26T08:41:05.050-05:00 [INFO] [lecturer] [main] OK stored KYU001 SPC2401 = 60 (req b76e841d-8152-4417-9b6d-ab33abdd12dd)
+2026-11-26T08:41:08.465-05:00 [INFO] [lecturer] [main] OK stored KYU002 SPC2401 = 61 (req d8c0b87d-72a9-4df6-83af-7304c39f32a2)
+2026-11-26T08:41:11.829-05:00 [FAILURE] [lecturer] [main] submitMark(KYU003,SPC2401,62) req=7ff3666b-944a-4dd7-8218-e2f2012992c2 attempt 1/3 timed out after 2500 ms (server may still have executed it)
+2026-11-26T08:41:14.555-05:00 [FAILURE] [lecturer] [main] submitMark(KYU003,SPC2401,62) req=7ff3666b-944a-4dd7-8218-e2f2012992c2 attempt 2/3 timed out after 2500 ms (server may still have executed it)
+2026-11-26T08:41:17.458-05:00 [FAILURE] [lecturer] [main] submitMark(KYU003,SPC2401,62) req=7ff3666b-944a-4dd7-8218-e2f2012992c2 attempt 3/3 timed out after 2500 ms (server may still have executed it)
+2026-11-26T08:41:17.478-05:00 [FAILURE] [lecturer] [main] submitMark(KYU003,SPC2401,62) req=7ff3666b-944a-4dd7-8218-e2f2012992c2 gave up after 3 attempts
+2026-11-26T08:41:17.485-05:00 [FAILURE] [lecturer] [main] GAVE UP submitMark(KYU003,SPC2401,62) req=7ff3666b-944a-4dd7-8218-e2f2012992c2 failed after 3 attempts: TimeoutException
+2026-11-26T08:41:24.137-05:00 [INFO] [lecturer] [main] LIST SPC2401: 3 mark(s)
+2026-11-26T08:41:24.165-05:00 [INFO] [lecturer] [main]   KYU001 SPC2401 = 60 (draft) @ 2026-11-26T13:41:04.826Z
+2026-11-26T08:41:24.165-05:00 [INFO] [lecturer] [main]   KYU002 SPC2401 = 61 (draft) @ 2026-11-26T13:41:07.765Z
+2026-11-26T08:41:24.165-05:00 [INFO] [lecturer] [main]   KYU003 SPC2401 = 62 (draft) @ 2026-11-26T13:41:11.807Z
