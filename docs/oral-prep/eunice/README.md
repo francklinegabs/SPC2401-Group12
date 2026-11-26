@@ -10,3 +10,7 @@ One question per card, answered from my own package (WP3) and report Sections 3 
 4. [Why can getMark readers run at the same time?](04-why-can-getmark-readers-run-at-the-same-time.md)
 5. [Why do I unlock in a finally block every time?](05-why-do-i-unlock-in-a-finally-block-every-time.md)
 6. [What does publish() return for an unknown unit, and what does the service do with it?](06-what-does-publish-return-for-an-unknown-unit-and-w.md)
+
+## WorkerPool – my thread architecture
+
+7. [Why did I choose a worker pool over thread-per-request?](07-why-did-i-choose-a-worker-pool-over-thread-per-req.md)
