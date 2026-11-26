@@ -37,3 +37,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 22. [What throughput did 1, 2, 4, 8 and 16 workers give on one core?](22-what-throughput-did-1-2-4-8-and-16-workers-give-on.md)
 23. [Why 88 and not 100 with one worker?](23-why-88-and-not-100-with-one-worker.md)
 24. [What did 4 real cores reach with 16 workers?](24-what-did-4-real-cores-reach-with-16-workers.md)
+25. [How does latency check against Little's law?](25-how-does-latency-check-against-little-s-law.md)
