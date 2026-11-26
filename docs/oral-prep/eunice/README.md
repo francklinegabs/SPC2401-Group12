@@ -41,3 +41,4 @@ One question per card, answered from my own package (WP3) and report Sections 3 
 
 24. [Draw the lost-update interleaving in words.](24-draw-the-lost-update-interleaving-in-words.md)
 25. [Why does making only getMark synchronized not protect the map?](25-why-does-making-only-getmark-synchronized-not-prot.md)
+26. [State the four conditions for deadlock using 4.2.](26-state-the-four-conditions-for-deadlock-using-4-2.md)
