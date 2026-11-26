@@ -50,3 +50,4 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 ## Invocation semantics and failures
 
 25. [Define the three outcomes a client can see after a remote call.](25-define-the-three-outcomes-a-client-can-see-after-a.md)
+26. [Why is at-most-once harder than at-least-once?](26-why-is-at-most-once-harder-than-at-least-once.md)
