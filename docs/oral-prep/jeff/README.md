@@ -43,3 +43,4 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 ## Defects and limits (7.5)
 
 27. [Name a real defect we found and fixed while testing.](27-name-a-real-defect-we-found-and-fixed-while-testin.md)
+28. [Why did one test run fail once, and how was it fixed?](28-why-did-one-test-run-fail-once-and-how-was-it-fixe.md)
