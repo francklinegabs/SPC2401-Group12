@@ -38,3 +38,4 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 ## Journal – surviving a crash
 
 19. [What is the journal's format?](19-what-is-the-journal-s-format.md)
+20. [What does write-ahead mean here?](20-what-does-write-ahead-mean-here.md)
