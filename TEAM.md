@@ -21,7 +21,8 @@ Full task lists, files and branches for each package: [docs/WORK_PACKAGES.md](do
 * Reviews as they happened, written as pull request author → reviewer who approved it:
   #8 Franckline → Ashley · #9 Ashley → Eunice · #10 Eunice → Ashley · #11 Kelvin → Franckline ·
   #12 Franckline → Jeff · #13 Eunice → Ashley · #14 Franckline → Kelvin · #15 Kelvin → Franckline ·
-  #16 Eunice → Ashley · #17 Ashley → Eunice · #18 Jeff → Eunice
+  #16 Eunice → Ashley · #17 Ashley → Eunice · #18 Jeff → Eunice ·
+  #19 Franckline → Kelvin · #20 Jeff → Eunice
 * Every task is a GitHub issue; commits and pull requests reference it (`Closes #7`).
 * Small commits with messages in the imperative ("Add lease expiry to notifier").
 * No compiled files (`out/`), downloaded jars (`lib/`), logs or passwords are committed.
