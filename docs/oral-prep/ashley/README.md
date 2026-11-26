@@ -46,3 +46,7 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 
 23. [What commands does the lecturer client accept?](23-what-commands-does-the-lecturer-client-accept.md)
 24. [Where is the request ID created?](24-where-is-the-request-id-created.md)
+
+## Invocation semantics and failures
+
+25. [Define the three outcomes a client can see after a remote call.](25-define-the-three-outcomes-a-client-can-see-after-a.md)
