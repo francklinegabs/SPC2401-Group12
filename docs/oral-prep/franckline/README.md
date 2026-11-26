@@ -35,3 +35,4 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 17. [What is wrong with lines (1)-(3) of the given submitMark?](17-what-is-wrong-with-lines-1-3-of-the-given-submitma.md)
 18. [How big was the lost update in practice?](18-how-big-was-the-lost-update-in-practice.md)
 19. [Why is the key sid + unit a bug?](19-why-is-the-key-sid-unit-a-bug.md)
+20. [Explain the deadlock in 4.2 in one breath.](20-explain-the-deadlock-in-4-2-in-one-breath.md)
