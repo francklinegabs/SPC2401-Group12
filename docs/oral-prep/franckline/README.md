@@ -17,3 +17,7 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 8. [Step 4: what does the dispatcher (skeleton) do?](08-step-4-what-does-the-dispatcher-skeleton-do.md)
 9. [Steps 5 and 6: what happens in the implementation and on the reply path?](09-steps-5-and-6-what-happens-in-the-implementation-a.md)
 10. [Why is submitMark at-most-once?](10-why-is-submitmark-at-most-once.md)
+
+## Section 2 – Notification and middleware
+
+11. [What are our three notification event types?](11-what-are-our-three-notification-event-types.md)
