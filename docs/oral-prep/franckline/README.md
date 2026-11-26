@@ -29,3 +29,7 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 14. [Hard-coded host name broke every client. Which transparency, and what fix?](14-hard-coded-host-name-broke-every-client-which-tran.md)
 15. [Two lecturers' updates overwrote each other. Which transparency?](15-two-lecturers-updates-overwrote-each-other-which-t.md)
 16. [A replica shows old marks after an update. Which transparency?](16-a-replica-shows-old-marks-after-an-update-which-tr.md)
+
+## Section 4 – Synchronisation and invocation cost
+
+17. [What is wrong with lines (1)-(3) of the given submitMark?](17-what-is-wrong-with-lines-1-3-of-the-given-submitma.md)
