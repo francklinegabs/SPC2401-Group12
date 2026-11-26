@@ -33,3 +33,4 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 ## Section 4 – Synchronisation and invocation cost
 
 17. [What is wrong with lines (1)-(3) of the given submitMark?](17-what-is-wrong-with-lines-1-3-of-the-given-submitma.md)
+18. [How big was the lost update in practice?](18-how-big-was-the-lost-update-in-practice.md)
