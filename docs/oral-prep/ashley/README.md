@@ -34,3 +34,7 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 16. [How does begin() guarantee only one winner?](16-how-does-begin-guarantee-only-one-winner.md)
 17. [What does a duplicate do while the original is still running?](17-what-does-a-duplicate-do-while-the-original-is-sti.md)
 18. [What happens if the original fails before storing?](18-what-happens-if-the-original-fails-before-storing.md)
+
+## Journal – surviving a crash
+
+19. [What is the journal's format?](19-what-is-the-journal-s-format.md)
