@@ -32,3 +32,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 20. [Why fetch the mark inside markPublished?](20-why-fetch-the-mark-inside-markpublished.md)
 21. [What does the student log when notified?](21-what-does-the-student-log-when-notified.md)
 22. [What does client.callback.hostname solve?](22-what-does-client-callback-hostname-solve.md)
+23. [What does the student do on exit?](23-what-does-the-student-do-on-exit.md)
