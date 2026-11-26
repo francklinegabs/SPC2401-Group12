@@ -22,3 +22,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 13. [What is in a PublishReport?](13-what-is-in-a-publishreport.md)
 14. [Why does the notifier never hold a lock while calling back?](14-why-does-the-notifier-never-hold-a-lock-while-call.md)
 15. [What did experiment B show?](15-what-did-experiment-b-show.md)
+16. [Why are notifier threads daemon threads?](16-why-are-notifier-threads-daemon-threads.md)
