@@ -38,3 +38,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 
 24. [Name our three event types and how each is delivered.](24-name-our-three-event-types-and-how-each-is-deliver.md)
 25. [Why push the event but pull the mark?](25-why-push-the-event-but-pull-the-mark.md)
+26. [What happens when a laptop sleeps for 2 days?](26-what-happens-when-a-laptop-sleeps-for-2-days.md)
