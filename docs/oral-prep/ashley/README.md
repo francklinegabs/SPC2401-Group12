@@ -18,3 +18,7 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 6. [What does KyuClientSocketFactory do on every new socket?](06-what-does-kyuclientsocketfactory-do-on-every-new-s.md)
 7. [In which JVM does the socket factory run?](07-in-which-jvm-does-the-socket-factory-run.md)
 8. [Why does the factory need equals and hashCode?](08-why-does-the-factory-need-equals-and-hashcode.md)
+
+## RetryingCaller – timeout, retry, back-off
+
+9. [What does RetryingCaller.call do, in one sentence?](09-what-does-retryingcaller-call-do-in-one-sentence.md)
