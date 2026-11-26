@@ -30,3 +30,7 @@ One question per card, answered from my own package (WP5) and report Section 7, 
 18. [What did 1,500 ms network delay show (C)?](18-what-did-1-500-ms-network-delay-show-c.md)
 19. [How does experiment C compare with 1.2?](19-how-does-experiment-c-compare-with-1-2.md)
 20. [Where is the evidence for 7.3?](20-where-is-the-evidence-for-7-3.md)
+
+## Performance (7.4)
+
+21. [How much slower is a remote call than a local one?](21-how-much-slower-is-a-remote-call-than-a-local-one.md)
