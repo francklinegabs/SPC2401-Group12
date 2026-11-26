@@ -27,3 +27,4 @@ One question per card, answered from my own package (WP2) and report Section 2, 
 ## StudentClient
 
 17. [How does a student receive callbacks?](17-how-does-a-student-receive-callbacks.md)
+18. [When is the lease renewed?](18-when-is-the-lease-renewed.md)
