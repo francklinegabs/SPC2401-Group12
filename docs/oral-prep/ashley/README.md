@@ -11,3 +11,4 @@ One question per card, answered from my own package (WP4) and report Section 5, 
 ## EventLog – the timestamped failure log
 
 4. [What does one EventLog line look like?](04-what-does-one-eventlog-line-look-like.md)
+5. [Where does EventLog write?](05-where-does-eventlog-write.md)
