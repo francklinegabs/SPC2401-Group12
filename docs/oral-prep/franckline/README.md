@@ -27,3 +27,4 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 ## Section 3 – OS types, processes, threads
 
 14. [Hard-coded host name broke every client. Which transparency, and what fix?](14-hard-coded-host-name-broke-every-client-which-tran.md)
+15. [Two lecturers' updates overwrote each other. Which transparency?](15-two-lecturers-updates-overwrote-each-other-which-t.md)
