@@ -34,3 +34,4 @@ One question per card, answered from my own package (WP3) and report Sections 3 
 19. [Rate a multiprocessor OS for 'survives one node failing'.](19-rate-a-multiprocessor-os-for-survives-one-node-fai.md)
 20. [Rate each OS type for 'scales to 20,000 students'.](20-rate-each-os-type-for-scales-to-20-000-students.md)
 21. [Which OS type did we choose for three servers, in one sentence?](21-which-os-type-did-we-choose-for-three-servers-in-o.md)
+22. [Which transparency is violated when clients switch to a backup by hand?](22-which-transparency-is-violated-when-clients-switch.md)
