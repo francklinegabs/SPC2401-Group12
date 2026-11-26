@@ -5,3 +5,4 @@ One question per card, answered from my own package (WP1), report Section 1 and 
 ## RMI in our design
 
 1. [What is a remote object in KYUCampusGrade?](01-what-is-a-remote-object-in-kyucampusgrade.md)
+2. [Why does GradeService extend java.rmi.Remote?](02-why-does-gradeservice-extend-java-rmi-remote.md)
